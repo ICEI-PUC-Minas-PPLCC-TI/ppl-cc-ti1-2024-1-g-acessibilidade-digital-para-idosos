@@ -1,6 +1,6 @@
 # Senior Tech
 
-Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
+O Senior Tech.
 
 ## Alunos integrantes da equipe
 
