@@ -1,6 +1,6 @@
 # Senior Tech
 
-Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
+Nosso projeto funcinará como um "assistente virtual", que contemplará varias instruções acerca do uso de aparelhos digitais. Ele será adaptado para a terceira idade com linguagem clara, ilustração e vídeos de passo a passo e leitura em voz dos textos (para auxiliar idoso com deficiência visual).
 
 ## Alunos integrantes da equipe
 
