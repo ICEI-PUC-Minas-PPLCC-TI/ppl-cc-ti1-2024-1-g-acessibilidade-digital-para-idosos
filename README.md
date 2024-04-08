@@ -1,18 +1,20 @@
-# Nome do projeto
+# Senior Tech
 
 Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
 
 ## Alunos integrantes da equipe
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Arthur Justino Dias
+* Bruno Máximo Machado
+* Enzo Teixeira Bastos
+* Giovanna Naves Ribeiro
+* Matheus Filipe Rocha Viana
+* Vitor Tiradentes Sousa e Silva
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Rommel Vieira Carneiro
+* Tamara Simões Silva
 
 ## Instruções de utilização
 
