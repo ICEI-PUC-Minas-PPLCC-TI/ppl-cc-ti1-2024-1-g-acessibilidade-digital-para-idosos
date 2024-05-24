@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Create Topic</title>
+<title>Create Message</title>
 <style>
   body {
     margin: 0;
@@ -35,7 +35,7 @@
   }
 
   .content {
-    margin-left: 200px; /* Largura da navbar */
+    margin-left: 200px;
     padding: 20px;
   }
 
@@ -60,66 +60,74 @@
     padding: 10px;
     cursor: pointer;
   }
+
+  #backToForum {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #4698CB;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 200px;
+    margin-left:200px;
+  }
 </style>
 </head>
 <body>
 
   <div class="navbar">
-    <button onclick="location.href='#'">Menu</button>
-    <button onclick="location.href='#'">Novo Conteúdo</button>
+    <button onclick="location.href='#'">Conteúdos</button>
+    <button onclick="location.href='#'">Meu Perfil</button>
+    <button onclick="location.href='#'">Favoritos</button>
   </div>
 
 <div class="content">
-  <h1>Criar Tópico</h1>
-  <form id="topicForm">
-    <label for="titulo">Título:</label>
+  <h1>Digite aqui sua dúvida</h1>
+  <form id="messageForm">
+    <label for="titulo">Título da mensagem:</label>
     <input type="text" id="titulo" name="titulo">
 
-    <label for="conteudo">Conteúdo:</label>
+    <label for="conteudo">Conteúdo da mensagem:</label>
     <textarea id="conteudo" name="conteudo"></textarea>
 
-    <label for="imagem">URL da Imagem:</label>
-    <input type="text" id="imagem" name="imagem">
+    <button type="submit">Enviar</button>
+    <button id="backToForum" onclick="location.href='#'"> <- Voltar ao Fórum</button>
 
-    <label for="categorias">Categorias:</label>
-    <select id="categorias" name="categorias" multiple>
-      <option value="redes sociais">Redes Sociais</option>
-      <option value="fotografia">Fotografia</option>
-      <option value="internet">Internet</option>
-      <option value="pesquisas">Pesquisas</option>
-      <option value="videochamada">Videochamada</option>
-    </select>
-
-    <button type="submit">Criar</button>
   </form>
+
 </div>
 
+
 <script>
-document.getElementById('topicForm').addEventListener('submit', function(event) {
+document.getElementById('messageForm').addEventListener('submit', function(event) {
   event.preventDefault();
 
   const form = event.target;
   const formData = new FormData(form);
-  const categorias = Array.from(formData.getAll('categorias'));
 
-// Criar um objeto a partir dos dados do formulário
-const formObject = Object.fromEntries(formData.entries());
-formObject.categorias = categorias;
+  // Solicitar o nome do usuário logado
+  const userName = prompt("Digite o seu nome:");
 
-  fetch('http://localhost:3000/topicos', {
+  // Criar um objeto mensagem a partir dos dados do formulário
+  const messageObject = Object.fromEntries(formData.entries());
+  messageObject.autor = userName;
+
+  fetch('http://localhost:3000/mensagens', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(Object.fromEntries(formData.entries())),
+    body: JSON.stringify(messageObject),
   })
     .then(response => response.json())
     .then(data => {
-      console.log('New topic added:', data);
+      console.log('New message added:', data);
       form.reset();
     })
     .catch(error => {
-      console.error('Error adding new topic:', error);
+      console.error('Error adding new message:', error);
     });
 });
 </script>

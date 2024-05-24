@@ -49,136 +49,44 @@
         "Redes Sociais",
         "Comunicação"
       ]
+    }
+  ],
+  "mensagens": [
+    {
+      "id": "1",
+      "titulo": "Como configurar o Wi-Fi",
+      "conteudo": "Olá, estou tendo dificuldades em configurar o Wi-Fi no meu novo smartphone. Alguém pode me ajudar com isso?",
+      "autor": "Ana"
     },
     {
-      "id": "6",
-      "titulo": "Uso do Google Maps",
-      "conteudo": "Aprenda a usar o Google Maps para encontrar lugares, traçar rotas e obter direções. Passo 1: Abra o aplicativo Google Maps em seu smartphone. Passo 2: Na barra de pesquisa, digite o local que deseja encontrar ou selecione um local no mapa. Passo 3: Toque no local para ver detalhes como endereço e avaliações. Passo 4: Para obter direções, toque em 'Rotas' e insira seu ponto de partida e destino. Passo 5: Selecione o modo de transporte desejado (a pé, de carro, de transporte público) e toque em 'Iniciar'.",
-      "imagem": "url_da_imagem_6.jpg",
-      "categorias": [
-        "Navegação",
-        "Mapas"
-      ]
+      "id": "2",
+      "titulo": "Como salvar contatos",
+      "conteudo": "Pessoal, estou com problemas para salvar novos contatos no meu telefone. Alguém sabe como fazer isso?",
+      "autor": "Pedro"
     },
     {
-      "id": "7",
-      "titulo": "Como utilizar smartphones",
-      "conteudo": "Conheça as principais funções dos smartphones e como utilizá-las para se manter conectado e informado. Passo 1: Ligue o seu smartphone pressionando o botão de energia. Passo 2: Desbloqueie o telefone deslizando o dedo na tela ou inserindo seu PIN ou padrão de desbloqueio. Passo 3: Na tela inicial, você encontrará os aplicativos instalados. Toque em um aplicativo para abri-lo. Passo 4: Para ajustar configurações, deslize o dedo para baixo a partir do topo da tela para acessar o painel de notificações e configurações rápidas. Passo 5: Para ligar para alguém, abra o aplicativo Telefone e digite o número ou selecione um contato da lista.",
-      "imagem": "url_da_imagem_7.jpg",
-      "categorias": [
-        "Tecnologia",
-        "Celulares"
-      ]
+      "id": "3",
+      "titulo": "Como configurar um alarme",
+      "conteudo": "Ei pessoal, estou tentando configurar um alarme no meu celular, mas não estou conseguindo. Alguma ajuda?",
+      "autor": "Carla"
     },
     {
-      "id": "8",
-      "titulo": "Criando uma conta de e-mail",
-      "conteudo": "Passo a passo para criar uma conta de e-mail e começar a enviar e receber mensagens. Passo 1: Abra o seu navegador da web e vá para o site do provedor de e-mail que deseja usar (por exemplo, Gmail, Outlook). Passo 2: Clique em 'Criar conta' ou 'Inscrever-se'. Passo 3: Preencha o formulário com suas informações pessoais, como nome, data de nascimento e número de telefone. Passo 4: Escolha um nome de usuário e uma senha. Passo 5: Leia e aceite os termos de serviço e política de privacidade. Passo 6: Clique em 'Criar conta' ou 'Concluir registro'.",
-      "imagem": "url_da_imagem_8.jpg",
-      "categorias": [
-        "E-mail",
-        "Comunicação"
-      ]
+      "id": "4",
+      "titulo": "Como limpar cache de aplicativos",
+      "conteudo": "Alguém pode me explicar como limpar o cache de aplicativos no meu smartphone? Está ficando lento.",
+      "autor": "Luiz"
     },
     {
-      "id": "9",
-      "titulo": "Segurança na Internet",
-      "conteudo": "Dicas e práticas para se manter seguro enquanto navega na internet e utiliza serviços online. Passo 1: Mantenha seu software atualizado, incluindo o sistema operacional, navegadores e aplicativos. Passo 2: Use senhas fortes e únicas para suas contas online e altere-as regularmente. Passo 3: Esteja ciente de golpes comuns online, como phishing, e-mails de spear phishing e fraudes de suporte técnico. Passo 4: Use uma conexão segura ao acessar sites que exigem informações pessoais ou financeiras. Passo 5: Instale e mantenha um software antivírus atualizado em seu dispositivo. Passo 6: Limite o compartilhamento de informações pessoais em redes sociais e sites de mídia.",
-      "imagem": "url_da_imagem_9.jpg",
-      "categorias": [
-        "Segurança",
-        "Internet"
-      ]
+      "id": "5",
+      "titulo": "Como ativar o modo noturno",
+      "conteudo": "Estou com dificuldades para encontrar a opção de ativar o modo noturno no meu telefone. Alguma dica?",
+      "autor": "Mariana"
     },
     {
-      "id": "10",
-      "titulo": "Utilizando o Skype",
-      "conteudo": "Saiba como utilizar o Skype para realizar chamadas de voz e vídeo gratuitas. Passo 1: Baixe e instale o aplicativo Skype em seu dispositivo. Passo 2: Abra o aplicativo Skype. Passo 3: Faça login com sua conta da Microsoft ou crie uma nova conta. Passo 4: Na lista de contatos, selecione a pessoa com quem deseja conversar. Passo 5: Para fazer uma chamada de voz, clique no ícone de telefone. Para fazer uma chamada de vídeo, clique no ícone de câmera. Passo 6: Aguarde até que a outra pessoa atenda à chamada e comece a conversar.",
-      "imagem": "url_da_imagem_10.jpg",
-      "categorias": [
-        "Comunicação",
-        "Videochamadas"
-      ]
-    },
-    {
-      "id": "11",
-      "titulo": "Configurações básicas de computadores",
-      "conteudo": "Conheça as configurações básicas do seu computador e como personalizá-las de acordo com suas preferências. Passo 1: Abra o menu 'Configurações' clicando no ícone de engrenagem no menu Iniciar ou pressionando a tecla Windows + I. Passo 2: Explore as diferentes categorias de configurações, como 'Sistema', 'Dispositivos', 'Rede e Internet', entre outros. Passo 3: Personalize as configurações de acordo com suas preferências, como plano de fundo da tela, idioma, hora e data, e opções de energia. Passo 4: Faça ajustes adicionais em áreas como segurança, privacidade e atualizações do sistema operacional. Passo 5: Experimente diferentes configurações para encontrar o que melhor se adapta às suas necessidades e estilo de uso.",
-      "imagem": "url_da_imagem_11.jpg",
-      "categorias": [
-        "Tecnologia",
-        "Computadores"
-      ]
-    },
-    {
-      "id": "12",
-      "titulo": "Fazendo buscas na Internet",
-      "conteudo": "Aprenda a fazer buscas eficientes na internet para encontrar informações relevantes e confiáveis. Passo 1: Abra o seu navegador da web e vá para o mecanismo de busca de sua preferência (por exemplo, Google, Bing). Passo 2: Na barra de pesquisa, digite as palavras-chave ou a pergunta que deseja pesquisar. Passo 3: Pressione 'Enter' ou clique no botão de pesquisa para ver os resultados. Passo 4: Revise os resultados e clique nos links para acessar as páginas relevantes. Passo 5: Refine sua pesquisa usando filtros, operadores de pesquisa avançada ou palavras-chave adicionais, se necessário. Passo 6: Avalie a confiabilidade e relevância das fontes encontradas antes de utilizar as informações encontradas.",
-      "imagem": "url_da_imagem_12.jpg",
-      "categorias": [
-        "Internet",
-        "Pesquisa"
-      ]
-    },
-    {
-      "id": "13",
-      "titulo": "Utilizando o YouTube",
-      "conteudo": "Descubra como usar o YouTube para assistir a vídeos e se entreter com uma variedade de conteúdo. Passo 1: Abra o aplicativo YouTube em seu smartphone ou vá para o site www.youtube.com em seu navegador da web. Passo 2: Use a barra de pesquisa para encontrar vídeos por título, palavra-chave ou nome do canal. Passo 3: Clique no vídeo desejado na lista de resultados para reproduzi-lo. Passo 4: Durante a reprodução, você pode pausar, avançar, retroceder e ajustar o volume usando os controles na tela. Passo 5: Para interagir com o vídeo, você pode curtir, comentar e compartilhar com outras pessoas. Passo 6: Explore os diferentes recursos do YouTube, como playlists, inscrições em canais e recomendações personalizadas.",
-      "imagem": "url_da_imagem_13.jpg",
-      "categorias": [
-        "Entretenimento",
-        "Vídeos"
-      ]
-    },
-    {
-      "id": "14",
-      "titulo": "Compartilhando fotos no Instagram",
-      "conteudo": "Aprenda a compartilhar suas fotos e momentos especiais no Instagram para se conectar com amigos e seguidores. Passo 1: Baixe e instale o aplicativo Instagram em seu dispositivo móvel. Passo 2: Crie uma conta ou faça login com suas credenciais existentes. Passo 3: Toque no ícone de '+' na parte inferior da tela para criar uma nova postagem. Passo 4: Selecione a foto que deseja compartilhar da sua galeria de imagens. Passo 5: Edite a foto, se desejar, adicionando filtros, legendas ou marcando outras contas. Passo 6: Escolha se deseja compartilhar a postagem no feed, nos Stories ou em outras plataformas de mídia social conectadas, e depois toque em 'Compartilhar'.",
-      "imagem": "url_da_imagem_14.jpg",
-      "categorias": [
-        "Redes Sociais",
-        "Fotografia"
-      ]
-    },
-    {
-      "id": "15",
-      "titulo": "Acessibilidade no Smartphone",
-      "conteudo": "Saiba como usar recursos de acessibilidade em smartphones para tornar o uso do dispositivo mais fácil para todos. Passo 1: Abra o menu 'Configurações' em seu smartphone. Passo 2: Procure a seção de 'Acessibilidade' e entre nela. Passo 3: Explore os diferentes recursos disponíveis, como aumentar o tamanho da fonte, ativar a leitura de tela ou adicionar legendas em vídeos. Passo 4: Selecione os recursos que melhor atendem às suas necessidades e habilite-os de acordo. Passo 5: Experimente os recursos ativados para garantir que eles melhorem sua experiência de uso do smartphone. Passo 6: Esteja ciente de que diferentes modelos de smartphone podem ter recursos de acessibilidade específicos, por isso, explore as opções disponíveis no seu dispositivo.",
-      "imagem": "url_da_imagem_15.jpg",
-      "categorias": [
-        "Tecnologia",
-        "Acessibilidade"
-      ]
-    },
-    {
-      "id": "462f",
-      "titulo": "Atender chamada",
-      "conteudo": "dd",
-      "imagem": "teste",
-      "categorias": "aaa"
-    },
-    {
-      "titulo": "Tirar foto",
-      "conteudo": "Clique no aplicativo Câmera, é o que tem a imagem de uma máquina fotográfica. Aperte o botão redondo.",
-      "imagem": "alooo",
-      "categorias": [
-        "fotografia"
-      ],
-      "id": "5787"
-    },
-    {
-      "id": "5e0a",
-      "titulo": "Tópico",
-      "conteudo": "conteúdo",
-      "imagem": "alo",
-      "categorias": "aaa"
-    },
-    {
-      "id": "e0a5",
-      "titulo": "cat",
-      "conteudo": "cat",
-      "imagem": "cat",
-      "categorias": "internet"
+      "id": "f678",
+      "titulo": "OLa grupo",
+      "conteudo": "achei muito legal a plataforma. ass Neide",
+      "autor": "neide"
     }
   ]
 }
