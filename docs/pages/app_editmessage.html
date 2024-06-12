@@ -98,10 +98,13 @@ document.addEventListener('DOMContentLoaded', function() {
   const urlParams = new URLSearchParams(window.location.search);
   //const messageId = urlParams.get('id');
   const messageId = 2;
+  let originalData = {};
+
   // Buscar os dados da mensagem existente
   fetch(`http://localhost:3000/mensagens/${messageId}`)
     .then(response => response.json())
     .then(data => {
+      originalData = data;
       document.getElementById('messageTitle').textContent = data.titulo;
       document.getElementById('messageAuthor').textContent = `Autor: ${data.autor}`;
       document.getElementById('conteudo').value = data.conteudo;
@@ -119,6 +122,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Criar um objeto a partir dos dados do formulário
     const formObject = Object.fromEntries(formData.entries());
+
+    // Manter o título e autor originais
+    formObject.titulo = originalData.titulo;
+    formObject.autor = originalData.autor;
 
     fetch(`http://localhost:3000/mensagens/${messageId}`, {
       method: 'PUT',
