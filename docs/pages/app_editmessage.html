@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Editar Mensagem</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .navbar {
+    background-color: #4698CB;
+    height: 100vh;
+    width: 200px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  .navbar button {
+    background-color: white;
+    color: #4698CB;
+    border: none;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    width: 80%;
+  }
+
+  .content {
+    margin-left: 200px; /* Largura da navbar */
+    padding: 20px;
+  }
+
+  form {
+    width: 500px;
+    margin: 20px auto;
+  }
+
+  form textarea,
+  form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  form button {
+    background-color: #4698CB;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .message-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .message-author {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="navbar">
+    <button onclick="location.href='#'">Menu</button>
+    <button onclick="location.href='app_createmessage.html'">Nova Mensagem</button>
+  </div>
+
+<div class="content">
+  <h1>Editar Mensagem</h1>
+  <div class="message-title" id="messageTitle"></div>
+  <div class="message-author" id="messageAuthor"></div>
+  <form id="messageForm">
+    <label for="conteudo">Conteúdo da mensagem:</label>
+    <textarea id="conteudo" name="conteudo"></textarea>
+
+    <button type="submit">Salvar Alterações</button>
+  </form>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  //const messageId = urlParams.get('id');
+  const messageId = 2;
+  // Buscar os dados da mensagem existente
+  fetch(`http://localhost:3000/mensagens/${messageId}`)
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('messageTitle').textContent = data.titulo;
+      document.getElementById('messageAuthor').textContent = `Autor: ${data.autor}`;
+      document.getElementById('conteudo').value = data.conteudo;
+    })
+    .catch(error => {
+      console.error('Erro ao carregar a mensagem:', error);
+    });
+
+  // Enviar os dados atualizados do formulário
+  document.getElementById('messageForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const form = event.target;
+    const formData = new FormData(form);
+
+    // Criar um objeto a partir dos dados do formulário
+    const formObject = Object.fromEntries(formData.entries());
+
+    fetch(`http://localhost:3000/mensagens/${messageId}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formObject),
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Mensagem atualizada:', data);
+        alert('Mensagem atualizada com sucesso!');
+        location.reload();
+      })
+      .catch(error => {
+        console.error('Erro ao atualizar a mensagem:', error);
+      });
+  });
+});
+</script>
+
+</body>
+</html>

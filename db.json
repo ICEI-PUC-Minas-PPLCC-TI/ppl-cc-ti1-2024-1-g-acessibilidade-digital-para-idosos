@@ -59,10 +59,8 @@
       "autor": "Ana"
     },
     {
-      "id": "2",
-      "titulo": "Como salvar contatos",
-      "conteudo": "Pessoal, estou com problemas para salvar novos contatos no meu telefone. Alguém sabe como fazer isso?",
-      "autor": "Pedro"
+      "conteudo": "Pessoal, estou com problemas para salvar novos contatos no meu telefone. Alguém sabe como fazer isso? Não consigo",
+      "id": "2"
     },
     {
       "id": "3",
