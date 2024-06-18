@@ -1,132 +1,98 @@
 {
-  "perfil": [
+  "topicos": [
     {
       "id": "1",
-      "foto": "https://example.com/images/1.jpg",
-      "nome": "Fulano de Tal",
-      "Senha": "+55 11 98765-4321"
+      "titulo": "Como enviar e-mails",
+      "conteudo": "Aprenda passo a passo como enviar e-mails para se comunicar com amigos e familiares. Passo 1: Abra o seu programa de e-mail. Passo 2: Clique em 'Escrever' ou 'Nova mensagem'. Passo 3: Digite o endereço de e-mail do destinatário na linha 'Para'. Passo 4: Escreva o assunto do e-mail na linha 'Assunto'. Passo 5: Digite sua mensagem na área de texto principal. Passo 6: Clique em 'Enviar' para enviar o e-mail.",
+      "imagem": "url_da_imagem_1.jpg",
+      "categorias": [
+        "Comunicação",
+        "E-mail"
+      ]
     },
     {
       "id": "2",
-      "foto": "https://example.com/images/2.jpg",
-      "nome": "Ciclano da Silva",
-      "Senha": "+55 21 98765-4321"
+      "titulo": "Navegação na Internet",
+      "conteudo": "Saiba como navegar na internet para encontrar informações úteis e interessantes. Passo 1: Abra o seu navegador da web (por exemplo, Google Chrome, Mozilla Firefox). Passo 2: Na barra de endereços, digite o site que deseja visitar. Passo 3: Pressione 'Enter' para acessar o site. Passo 4: Use os botões 'Voltar' e 'Avançar' para navegar entre as páginas. Passo 5: Clique em links para acessar diferentes seções do site. Passo 6: Para pesquisar, digite sua consulta na barra de pesquisa e pressione 'Enter'.",
+      "imagem": "url_da_imagem_2.jpg",
+      "categorias": [
+        "Internet",
+        "Pesquisa"
+      ]
     },
     {
       "id": "3",
-      "foto": "https://example.com/images/3.jpg",
-      "nome": "Beltrano dos Santos",
-      "Senha": "+55 31 98765-4321"
+      "titulo": "Uso do WhatsApp",
+      "conteudo": "Aprenda a usar o WhatsApp para se comunicar por mensagens de texto, voz e vídeo. Passo 1: Abra o aplicativo WhatsApp em seu smartphone. Passo 2: Toque na conversa com a pessoa para quem deseja enviar uma mensagem. Passo 3: Na parte inferior da tela, digite sua mensagem no campo de texto. Passo 4: Toque no ícone de avião de papel para enviar a mensagem. Passo 5: Para fazer uma chamada de voz ou vídeo, toque no ícone do telefone ou câmera na parte superior da conversa.",
+      "imagem": "url_da_imagem_3.jpg",
+      "categorias": [
+        "Comunicação",
+        "Mensagens"
+      ]
     },
     {
       "id": "4",
-      "foto": "https://example.com/images/4.jpg",
-      "nome": "Ana Pereira",
-      "Senha": "+55 41 98765-4321"
+      "titulo": "Como usar o Zoom",
+      "conteudo": "Descubra como participar de videochamadas usando o Zoom para se conectar com amigos e familiares. Passo 1: Baixe e instale o aplicativo Zoom em seu dispositivo. Passo 2: Abra o aplicativo Zoom. Passo 3: Clique em 'Entrar em uma reunião'. Passo 4: Insira o ID da reunião fornecido pelo organizador e clique em 'Entrar'. Passo 5: Aguarde a aprovação do host para ingressar na reunião. Passo 6: Uma vez dentro da reunião, clique em 'Iniciar vídeo' e 'Unir-se com o áudio' se desejar ativar sua câmera e microfone.",
+      "imagem": "url_da_imagem_4.jpg",
+      "categorias": [
+        "Comunicação",
+        "Videoconferência"
+      ]
     },
     {
       "id": "5",
-      "foto": "https://example.com/images/5.jpg",
-      "nome": "Carlos Alberto",
-      "Senha": "+55 51 98765-4321"
-    },
-    {
-      "id": "6",
-      "foto": "https://example.com/images/6.jpg",
-      "nome": "Maria de Souza",
-      "Senha": "+55 61 98765-4321"
-    },
-    {
-      "id": "7",
-      "foto": "https://example.com/images/7.jpg",
-      "nome": "João Mendes",
-      "Senha": "+55 71 98765-4321"
-    },
-    {
-      "id": "8",
-      "foto": "https://example.com/images/8.jpg",
-      "nome": "Paula Rodrigues",
-      "Senha": "+55 81 98765-4321"
-    },
-    {
-      "id": "9",
-      "foto": "https://example.com/images/9.jpg",
-      "nome": "Roberto Lima",
-      "Senha": "+55 91 98765-4321"
-    },
-    {
-      "id": "10",
-      "foto": "https://example.com/images/10.jpg",
-      "nome": "Fernanda Costa",
-      "Senha": "+55 19 98765-4321"
-    },
-    {
-      "id": "11",
-      "foto": "https://example.com/images/11.jpg",
-      "nome": "Ricardo Barbosa",
-      "Senha": "+55 27 98765-4321"
-    },
-    {
-      "id": "12",
-      "foto": "https://example.com/images/12.jpg",
-      "nome": "Larissa Teixeira",
-      "Senha": "+55 85 98765-4321"
-    },
-    {
-      "id": "13",
-      "foto": "https://example.com/images/13.jpg",
-      "nome": "Gustavo Ferreira",
-      "Senha": "+55 62 98765-4321"
-    },
-    {
-      "id": "14",
-      "foto": "https://example.com/images/14.jpg",
-      "nome": "Mariana Almeida",
-      "Senha": "+55 67 98765-4321"
-    },
-    {
-      "id": "15",
-      "foto": "https://example.com/images/15.jpg",
-      "nome": "Pedro Henrique",
-      "Senha": "+55 95 98765-4321"
+      "titulo": "Utilizando o Facebook",
+      "conteudo": "Saiba como utilizar o Facebook para se manter conectado com amigos e familiares e encontrar conteúdo interessante. Passo 1: Faça login na sua conta do Facebook. Passo 2: No feed de notícias, você verá postagens de seus amigos e páginas que segue. Passo 3: Para interagir com uma postagem, você pode clicar em 'Curtir', 'Comentar' ou 'Compartilhar'. Passo 4: Para encontrar amigos, use a barra de pesquisa no topo da página. Passo 5: Para publicar uma postagem, clique em 'Criar postagem' e digite o que deseja compartilhar.",
+      "imagem": "url_da_imagem_5.jpg",
+      "categorias": [
+        "Redes Sociais",
+        "Comunicação"
+      ]
     }
   ],
-  "mensagensForum": [
+  "mensagens": [
     {
-      "titulo": "Problemas com navegação em sites? Aqui estão algumas soluções!",
-      "autor": "Vitor Tiradentes",
-      "conteudo": " Olá pessoal, tenho enfrentado dificuldades ao navegar em alguns sites. As fontes são muito pequenas e os botões são difíceis de encontrar. Alguém mais passa por isso? Gostaria de compartilhar algumas soluções que encontrei. Uma delas é usar extensões de navegador que permitem aumentar o tamanho das fontes e até mesmo alterar as cores para melhorar a legibilidade. Outra opção é entrar em contato com os administradores do site e sugerir melhorias na acessibilidade. Vamos compartilhar nossas experiências e ajudar uns aos outros!",
-      "id": "1"
+      "id": "1",
+      "titulo": "Como configurar o Wi-Fi",
+      "conteudo": "Olá, estou tendo dificuldades em configurar o Wi-Fi no meu novo smartphone. Alguém pode me ajudar com isso?",
+      "autor": "Ana"
     },
     {
-      "id": "2",
-      "autor": "Ciclano da Silva",
-      "titulo": "Aplicativos úteis para idosos: compartilhe suas recomendações!",
-      "conteudo": "Olá amigos, estou procurando aplicativos úteis para facilitar a vida dos idosos. Conheço alguns como aplicativos de lembretes de medicamentos e exercícios físicos, mas gostaria de descobrir mais opções. Vocês têm algum aplicativo favorito que gostariam de recomendar? Pode ser qualquer coisa, desde aplicativos de saúde até jogos educativos que ajudem a manter a mente ativa. Vamos compartilhar nossas descobertas e tornar a tecnologia mais acessível para todos!"
+      "conteudo": "Pessoal, estou com problemas para salvar novos contatos no meu telefone. Alguém sabe como fazer isso? Não estou conseguindo",
+      "titulo": "Como salvar contatos",
+      "autor": "Pedro",
+      "id": "2"
     },
     {
       "id": "3",
-      "autor": "Maria Souza",
-      "titulo": "Configurações para melhorar a leitura em telas: como vocês fazem?",
-      "conteudo": "Olá pessoal, minha mãe tem dificuldade em ler em telas de dispositivos móveis. Encontrei algumas configurações úteis, como aumentar o tamanho da fonte e usar temas de alto contraste, mas ainda estamos buscando mais soluções. Alguém já passou por isso e encontrou outras formas de facilitar a leitura para idosos? Vamos compartilhar nossas dicas!"
+      "titulo": "Como configurar um alarme",
+      "conteudo": "Ei pessoal, estou tentando configurar um alarme no meu celular, mas não estou conseguindo. Alguma ajuda?",
+      "autor": "Carla"
     },
     {
       "id": "4",
-      "autor": "João Pereira",
-      "titulo": "Navegadores amigáveis para idosos: recomendações?",
-      "conteudo": "Olá a todos, meu pai está aprendendo a usar a internet, mas ele acha os navegadores complicados. Estou procurando navegadores com interfaces simplificadas e ícones maiores que sejam mais acessíveis para idosos. Vocês conhecem alguma opção que seja fácil de usar? Agradeço qualquer sugestão!"
+      "titulo": "Como limpar cache de aplicativos",
+      "conteudo": "Alguém pode me explicar como limpar o cache de aplicativos no meu smartphone? Está ficando lento.",
+      "autor": "Luiz"
     },
     {
       "id": "5",
-      "autor": "Laura Fernandes",
-      "titulo": "Configurações de navegação que ajudam os idosos: sugestões?",
-      "conteudo": "Oi pessoal! Minha avó acha difícil clicar em pequenos botões e menus na internet. Encontrei algumas opções para aumentar o zoom e configurar a navegação por voz, mas ainda estou procurando mais dicas. Vocês conhecem outras configurações que ajudam a navegação para idosos? Vamos compartilhar!"
+      "titulo": "Como ativar o modo noturno",
+      "conteudo": "Estou com dificuldades para encontrar a opção de ativar o modo noturno no meu telefone. Alguma dica?",
+      "autor": "Mariana"
     },
     {
-      "id": "6",
-      "autor": "Pedro Alves",
-      "titulo": "Aplicativos de comunicação mais acessíveis para idosos?",
-      "conteudo": "Olá comunidade! Minha tia tem dificuldade com aplicativos de mensagens por causa dos botões pequenos. Procuro apps com teclas maiores e interfaces simples. Vocês conhecem aplicativos de mensagens ou chamadas que sejam amigáveis para idosos? Compartilhem suas sugestões!"
+      "id": "f678",
+      "titulo": "OLa grupo",
+      "conteudo": "achei muito legal a plataforma. ass Neide",
+      "autor": "neide"
+    },
+    {
+      "id": "6581",
+      "titulo": "Bom dia",
+      "conteudo": "Que deus ilumine",
+      "autor": "Neide Rocha de Silva"
     }
   ]
 }

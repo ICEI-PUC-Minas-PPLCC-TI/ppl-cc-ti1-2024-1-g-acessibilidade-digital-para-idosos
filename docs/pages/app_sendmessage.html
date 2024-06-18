@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Message</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .navbar {
+    background-color: #4698CB;
+    height: 100vh;
+    width: 200px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  .navbar button {
+    background-color: white;
+    color: #4698CB;
+    border: none;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    width: 80%;
+  }
+
+  .content {
+    margin-left: 200px;
+    padding: 20px;
+  }
+
+  form {
+    width: 500px;
+    margin: 50px auto;
+  }
+
+  form input,
+  form textarea,
+  form select,
+  form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+    margin-top: 10px;
+  }
+
+  form button {
+    background-color: #4698CB;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  #backToForum {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #4698CB;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 200px;
+    margin-left:207px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="navbar">
+    <button onclick="location.href='#'">Conteúdos</button>
+    <button onclick="location.href='#'">Meu Perfil</button>
+    <button onclick="location.href='#'">Favoritos</button>
+  </div>
+
+<div class="content">
+  <h1>Digite aqui sua dúvida</h1>
+  <form id="messageForm">
+    <label for="titulo">Título da mensagem:</label>
+    <input type="text" id="titulo" name="titulo">
+
+    <label for="conteudo">Conteúdo da mensagem:</label>
+    <textarea id="conteudo" name="conteudo"></textarea>
+
+    <button type="submit">Enviar</button>
+    <button id="backToForum" onclick="location.href='#'"> <- Voltar ao Fórum</button>
+
+  </form>
+
+</div>
+
+
+<script>
+document.getElementById('messageForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const form = event.target;
+  const formData = new FormData(form);
+
+  const userName = "Neide Rocha de Silva";
+
+  const messageObject = Object.fromEntries(formData.entries());
+  messageObject.autor = userName;
+
+  fetch('http://localhost:3000/mensagens', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(messageObject),
+  })
+    .then(response => response.json())
+    .then(data => {
+      console.log('New message added:', data);
+      form.reset();
+    })
+    .catch(error => {
+      console.error('Error adding new message:', error);
+    });
+});
+</script>
+
+</body>
+</html>
