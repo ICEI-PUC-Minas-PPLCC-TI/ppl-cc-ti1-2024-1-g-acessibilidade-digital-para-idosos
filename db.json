@@ -232,12 +232,22 @@
     },
     {
       "UserId": 2,
-      "id": "5",
-      "titulo": "Utilizando o Facebook",
-      "imagem": "img/facebook.webp",
+      "id": "1",
+      "titulo": "Como enviar e-mails",
+      "imagem": "img/email.png",
       "categorias": [
-        "Redes Sociais",
-        "Comunicação"
+        "Comunicação",
+        "E-mail"
+      ]
+    },
+    {
+      "UserId": 2,
+      "id": "10",
+      "titulo": "Utilizando o Skype",
+      "imagem": "img/skype.jpeg",
+      "categorias": [
+        "Comunicação",
+        "Videochamadas"
       ]
     }
   ],
