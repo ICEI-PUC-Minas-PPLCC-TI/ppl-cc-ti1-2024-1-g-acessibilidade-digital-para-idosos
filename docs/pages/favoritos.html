@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favoritos</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="img/logo_redonda.png" alt="Logo do Site">
+        </div>
+        <ul>
+            <li><a href="index.html">Conteúdos</a></li>
+            <li><a href="#">Meu Perfil</a></li>
+            <li><a href="favoritos.html">Favoritos</a></li>
+        </ul>
+    </div>
+    <div class="search-bar">
+        <input type="text" class="search-input" id="searchInput" placeholder="Pesquisar...">
+        <button class="search-button" onclick="search()">Pesquisar</button>
+    </div>
+    <div class="menu-bar">
+        <div class="menu" onclick="toggleMenu()">Categorias</div>
+        <div class="menu-options" id="menuOptions">
+        </div>
+    </div>
+    <div class="content-grid" id="favoritos-grid">
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menuOptions = document.getElementById("menuOptions");
+            if (menuOptions.style.display === "none" || menuOptions.style.display === "") {
+                menuOptions.style.display = "block";
+            } else {
+                menuOptions.style.display = "none";
+            }
+        }
+
+        function search() {
+            const searchText = document.getElementById("searchInput").value.toLowerCase();
+            const favoritos = document.querySelectorAll(".card-title");
+            
+            favoritos.forEach(card => {
+                const title = card.textContent.toLowerCase();
+                const cardParent = card.parentElement.parentElement.parentElement;
+                if (title.includes(searchText)) {
+                    cardParent.style.display = "block";
+                } else {
+                    cardParent.style.display = "none";
+                }
+            });
+        }
+
+        function filterByCategory(category) {
+            const favoritos = document.querySelectorAll(".card");
+
+            favoritos.forEach(card => {
+                const cardCategory = card.querySelector(".card-title").textContent.toLowerCase();
+                const cardParent = card.parentElement;
+                if (category === "Todas as categorias" || cardCategory.includes(category.toLowerCase())) {
+                    cardParent.style.display = "block";
+                } else {
+                    cardParent.style.display = "none";
+                }
+            });
+        }
+
+        const favoritosGrid = document.getElementById("favoritos-grid");
+
+        fetch('http://localhost:3001/favoritos')
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(item => addFavoriteHTML(item));
+            })
+            .catch(error => {
+                console.error("Erro ao carregar favoritos:", error);
+            });
+
+        function addFavoriteHTML(item) {
+            const div = document.createElement("div");
+            div.classList.add("col-md-4", "mb-4");
+            div.innerHTML = `
+                <div class="card h-100">
+                    <img src="${item.imagem}" class="card-img-top img-fluid" alt="Imagem do Repositório">
+                    <div class="card-body">
+                        <h5 class="card-title">${item.titulo}</h5>
+                        <p class="card-text">${item.conteudo || ''}</p>
+                    </div>
+                </div>
+            `;
+            favoritosGrid.appendChild(div);
+        }
+
+        const menuOptions = document.getElementById("menuOptions");
+        const categories = ["Todas as categorias", "Comunicação", "E-mail", "Internet", "Pesquisa", "Mensagens"];
+
+        categories.forEach(category => {
+            const div = document.createElement("div");
+            div.classList.add("menu-option");
+            div.textContent = category;
+            div.onclick = () => {
+                filterByCategory(category);
+                toggleMenu();
+            };
+            menuOptions.appendChild(div);
+        });
+    </script>
+</body>
+</html>

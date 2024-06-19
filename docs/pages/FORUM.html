@@ -192,7 +192,7 @@
     <script>
         const fetchMessages = async () => {
             try {
-                const response = await fetch('http://localhost:3000/mensagensForum'); // Altere o endpoint conforme necessário
+                const response = await fetch('http://localhost:3000/mensagens'); // Altere o endpoint conforme necessário
                 if (response.ok) {
                     const mensagensForum = await response.json();
                     displayMessages(mensagensForum);
@@ -231,7 +231,7 @@
 
         const deleteMessage = async (messageId) => {
             try {
-                const response = await fetch(`http://localhost:3000/mensagensForum/${messageId}`, {
+                const response = await fetch(`http://localhost:3000/mensagens/${messageId}`, {
                     method: 'DELETE'
                 });
                 if (response.ok) {
@@ -267,7 +267,7 @@
             const newAuthor = document.getElementById(`edit-author-${messageId}`).value;
             const newContent = document.getElementById(`edit-content-${messageId}`).value;
             try {
-                const response = await fetch(`http://localhost:3000/mensagensForum/${messageId}`, {
+                const response = await fetch(`http://localhost:3000/mensagens/${messageId}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'

@@ -4,7 +4,7 @@
       "id": "1",
       "titulo": "Como enviar e-mails",
       "conteudo": "Aprenda passo a passo como enviar e-mails para se comunicar com amigos e familiares. Passo 1: Abra o seu programa de e-mail. Passo 2: Clique em 'Escrever' ou 'Nova mensagem'. Passo 3: Digite o endereço de e-mail do destinatário na linha 'Para'. Passo 4: Escreva o assunto do e-mail na linha 'Assunto'. Passo 5: Digite sua mensagem na área de texto principal. Passo 6: Clique em 'Enviar' para enviar o e-mail.",
-      "imagem": "url_da_imagem_1.jpg",
+      "imagem": "img/email.png",
       "categorias": [
         "Comunicação",
         "E-mail"
@@ -14,7 +14,7 @@
       "id": "2",
       "titulo": "Navegação na Internet",
       "conteudo": "Saiba como navegar na internet para encontrar informações úteis e interessantes. Passo 1: Abra o seu navegador da web (por exemplo, Google Chrome, Mozilla Firefox). Passo 2: Na barra de endereços, digite o site que deseja visitar. Passo 3: Pressione 'Enter' para acessar o site. Passo 4: Use os botões 'Voltar' e 'Avançar' para navegar entre as páginas. Passo 5: Clique em links para acessar diferentes seções do site. Passo 6: Para pesquisar, digite sua consulta na barra de pesquisa e pressione 'Enter'.",
-      "imagem": "url_da_imagem_2.jpg",
+      "imagem": "img/Internet.png",
       "categorias": [
         "Internet",
         "Pesquisa"
@@ -24,7 +24,7 @@
       "id": "3",
       "titulo": "Uso do WhatsApp",
       "conteudo": "Aprenda a usar o WhatsApp para se comunicar por mensagens de texto, voz e vídeo. Passo 1: Abra o aplicativo WhatsApp em seu smartphone. Passo 2: Toque na conversa com a pessoa para quem deseja enviar uma mensagem. Passo 3: Na parte inferior da tela, digite sua mensagem no campo de texto. Passo 4: Toque no ícone de avião de papel para enviar a mensagem. Passo 5: Para fazer uma chamada de voz ou vídeo, toque no ícone do telefone ou câmera na parte superior da conversa.",
-      "imagem": "url_da_imagem_3.jpg",
+      "imagem": "img/whatsapp.png",
       "categorias": [
         "Comunicação",
         "Mensagens"
@@ -34,7 +34,7 @@
       "id": "4",
       "titulo": "Como usar o Zoom",
       "conteudo": "Descubra como participar de videochamadas usando o Zoom para se conectar com amigos e familiares. Passo 1: Baixe e instale o aplicativo Zoom em seu dispositivo. Passo 2: Abra o aplicativo Zoom. Passo 3: Clique em 'Entrar em uma reunião'. Passo 4: Insira o ID da reunião fornecido pelo organizador e clique em 'Entrar'. Passo 5: Aguarde a aprovação do host para ingressar na reunião. Passo 6: Uma vez dentro da reunião, clique em 'Iniciar vídeo' e 'Unir-se com o áudio' se desejar ativar sua câmera e microfone.",
-      "imagem": "url_da_imagem_4.jpg",
+      "imagem": "img/zoom.jpeg",
       "categorias": [
         "Comunicação",
         "Videoconferência"
@@ -44,10 +44,100 @@
       "id": "5",
       "titulo": "Utilizando o Facebook",
       "conteudo": "Saiba como utilizar o Facebook para se manter conectado com amigos e familiares e encontrar conteúdo interessante. Passo 1: Faça login na sua conta do Facebook. Passo 2: No feed de notícias, você verá postagens de seus amigos e páginas que segue. Passo 3: Para interagir com uma postagem, você pode clicar em 'Curtir', 'Comentar' ou 'Compartilhar'. Passo 4: Para encontrar amigos, use a barra de pesquisa no topo da página. Passo 5: Para publicar uma postagem, clique em 'Criar postagem' e digite o que deseja compartilhar.",
-      "imagem": "url_da_imagem_5.jpg",
+      "imagem": "img/facebook.webp",
       "categorias": [
         "Redes Sociais",
         "Comunicação"
+      ]
+    },
+    {
+      "id": "6",
+      "titulo": "Uso do Google Maps",
+      "imagem": "img/maps.png",
+      "categorias": [
+        "Navegação",
+        "Mapas"
+      ]
+    },
+    {
+      "id": "7",
+      "titulo": "Como utilizar smartphones",
+      "imagem": "img/smartphone.jpg",
+      "categorias": [
+        "Tecnologia",
+        "Celulares"
+      ]
+    },
+    {
+      "id": "8",
+      "titulo": "Criando uma conta de e-mail",
+      "imagem": "img/conta.png",
+      "categorias": [
+        "E-mail",
+        "Comunicação"
+      ]
+    },
+    {
+      "id": "9",
+      "titulo": "Segurança na Internet",
+      "imagem": "img/securit.png",
+      "categorias": [
+        "Segurança",
+        "Internet"
+      ]
+    },
+    {
+      "id": "10",
+      "titulo": "Utilizando o Skype",
+      "imagem": "img/skype.jpeg",
+      "categorias": [
+        "Comunicação",
+        "Videochamadas"
+      ]
+    },
+    {
+      "id": "11",
+      "titulo": "Configurações básicas de computadores",
+      "imagem": "img/computador.jpeg",
+      "categorias": [
+        "Tecnologia",
+        "Computadores"
+      ]
+    },
+    {
+      "id": "12",
+      "titulo": "Fazendo buscas na Internet",
+      "imagem": "img/pesquisa.jpeg",
+      "categorias": [
+        "Internet",
+        "Pesquisa"
+      ]
+    },
+    {
+      "id": "13",
+      "titulo": "Utilizando o YouTube",
+      "imagem": "img/youtube.jpeg",
+      "categorias": [
+        "Entretenimento",
+        "Vídeos"
+      ]
+    },
+    {
+      "id": "14",
+      "titulo": "Compartilhando fotos no Instagram",
+      "imagem": "img/instagram.jpeg",
+      "categorias": [
+        "Redes Sociais",
+        "Fotografia"
+      ]
+    },
+    {
+      "id": "15",
+      "titulo": "Acessibilidade no Smartphone",
+      "imagem": "img/smartphone.jpg",
+      "categorias": [
+        "Tecnologia",
+        "Acessibilidade"
       ]
     }
   ],
@@ -93,6 +183,99 @@
       "titulo": "Bom dia",
       "conteudo": "Que deus ilumine",
       "autor": "Neide Rocha de Silva"
+    }
+  ],
+  "usuarios": [
+    {
+      "UserId": 1,
+      "nome": "Alice"
+    },
+    {
+      "UserId": 2,
+      "nome": "Bob"
+    },
+    {
+      "UserId": 3,
+      "nome": "Charlie"
+    }
+  ],
+  "favoritos": [
+    {
+      "UserId": 2,
+      "id": 1,
+      "titulo": "Como enviar e-mails",
+      "imagem": "img/email.png",
+      "categorias": [
+        "Comunicação",
+        "E-mail"
+      ]
+    },
+    {
+      "UserId": 2,
+      "id": 3,
+      "titulo": "Uso do WhatsApp",
+      "imagem": "img/whatsapp.png",
+      "categorias": [
+        "Comunicação",
+        "Mensagens"
+      ]
+    },
+    {
+      "UserId": 2,
+      "id": "4",
+      "titulo": "Como usar o Zoom",
+      "imagem": "img/zoom.jpeg",
+      "categorias": [
+        "Comunicação",
+        "Videoconferência"
+      ]
+    },
+    {
+      "UserId": 2,
+      "id": "1",
+      "titulo": "Como enviar e-mails",
+      "imagem": "img/email.png",
+      "categorias": [
+        "Comunicação",
+        "E-mail"
+      ]
+    },
+    {
+      "UserId": 2,
+      "id": "10",
+      "titulo": "Utilizando o Skype",
+      "imagem": "img/skype.jpeg",
+      "categorias": [
+        "Comunicação",
+        "Videochamadas"
+      ]
+    }
+  ],
+  "cliente": [
+    {
+      "id": 1,
+      "nome": "João",
+      "usuario": "joao1"
+    },
+    {
+      "id": 2,
+      "nome": "Maria",
+      "senha": "senha456",
+      "usuario": "maria2"
+    }
+  ],
+  "admin": [
+    {
+      "id": 1,
+      "nome": "Matheus",
+      "senha": "admin123",
+      "usuario": "matheus1"
+    },
+    {
+      "id": 2,
+      "nome": "Admin 2",
+      "senha": "admin456",
+      "usuario": "admin2"
     }
   ]
 }
