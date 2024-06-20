@@ -141,7 +141,7 @@
       ]
     }
   ],
-  "mensagens": [
+  "mensagensForum": [
     {
       "id": "1",
       "titulo": "Como configurar o Wi-Fi",
@@ -202,52 +202,12 @@
   "favoritos": [
     {
       "UserId": 2,
-      "id": 1,
-      "titulo": "Como enviar e-mails",
-      "imagem": "img/email.png",
-      "categorias": [
-        "Comunicação",
-        "E-mail"
-      ]
-    },
-    {
-      "UserId": 2,
-      "id": 3,
-      "titulo": "Uso do WhatsApp",
-      "imagem": "img/whatsapp.png",
-      "categorias": [
-        "Comunicação",
-        "Mensagens"
-      ]
-    },
-    {
-      "UserId": 2,
-      "id": "4",
-      "titulo": "Como usar o Zoom",
-      "imagem": "img/zoom.jpeg",
-      "categorias": [
-        "Comunicação",
-        "Videoconferência"
-      ]
-    },
-    {
-      "UserId": 2,
       "id": "1",
       "titulo": "Como enviar e-mails",
       "imagem": "img/email.png",
       "categorias": [
         "Comunicação",
         "E-mail"
-      ]
-    },
-    {
-      "UserId": 2,
-      "id": "10",
-      "titulo": "Utilizando o Skype",
-      "imagem": "img/skype.jpeg",
-      "categorias": [
-        "Comunicação",
-        "Videochamadas"
       ]
     }
   ],
