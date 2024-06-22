@@ -14,11 +14,9 @@ async function handleLogin(event) {
         }
     })
         .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            
+        .then(data => {          
             var usuario = data.find(usuario => usuario.nome_usuario === nome_usuario && usuario.senha === senha);
-            console.log(usuario)
+
             if (usuario) {
                 if (usuario.tipo_usuario == 'cliente') {
                     localStorage.setItem("tipoUsuario", "cliente");
