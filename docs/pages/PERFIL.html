@@ -157,7 +157,7 @@
     <script>
         const fetchUserData = async () => {
             try {
-                const response = await fetch('http://localhost:3000/perfil/1'); // Ajuste o ID conforme necessário
+                const response = await fetch('http://localhost:3001/perfil/1'); // Ajuste o ID conforme necessário
                 if (response.ok) {
                     const usuario = await response.json();
                     document.getElementById('nome-usuario').innerText = usuario.nome;
