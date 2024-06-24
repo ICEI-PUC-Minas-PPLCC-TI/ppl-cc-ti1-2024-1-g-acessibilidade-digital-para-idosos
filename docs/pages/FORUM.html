@@ -192,10 +192,10 @@
     <script>
         const fetchMessages = async () => {
             try {
-                const response = await fetch('http://localhost:3000/mensagens'); // Altere o endpoint conforme necessário
+                const response = await fetch('http://localhost:3001/mensagens'); // Altere o endpoint conforme necessário
                 if (response.ok) {
-                    const mensagensForum = await response.json();
-                    displayMessages(mensagensForum);
+                    const mensagens = await response.json();
+                    displayMessages(mensagens);
                 } else {
                     console.error('Erro ao buscar mensagens do fórum:', response.status);
                 }
@@ -207,7 +207,7 @@
         const displayMessages = (mensagens) => {
             const messageContainer = document.getElementById('message-container');
             messageContainer.innerHTML = '';
-            mensagensForum.forEach(mensagem => {
+            mensagens.forEach(mensagem => {
                 const mensagemDiv = document.createElement('div');
                 mensagemDiv.classList.add('message');
                 mensagemDiv.setAttribute('data-id', mensagem.id); // Adicione um atributo para identificação
@@ -231,7 +231,7 @@
 
         const deleteMessage = async (messageId) => {
             try {
-                const response = await fetch(`http://localhost:3000/mensagens/${messageId}`, {
+                const response = await fetch(`http://localhost:3001/mensagens/${messageId}`, {
                     method: 'DELETE'
                 });
                 if (response.ok) {
@@ -267,7 +267,7 @@
             const newAuthor = document.getElementById(`edit-author-${messageId}`).value;
             const newContent = document.getElementById(`edit-content-${messageId}`).value;
             try {
-                const response = await fetch(`http://localhost:3000/mensagens/${messageId}`, {
+                const response = await fetch(`http://localhost:3001/mensagens/${messageId}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'
