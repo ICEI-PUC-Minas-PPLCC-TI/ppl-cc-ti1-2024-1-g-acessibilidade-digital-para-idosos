@@ -17,6 +17,7 @@
             <li><a href="perfil.html">Meu Perfil</a></li>
             <li><a href="favoritos.html">Favoritos</a></li>
             <li><a href="forum.html">Fórum</a></li>
+            <li><a href="index.html">Sair</a></li>
         </ul>
     </div>
     <div class="search-bar">
@@ -38,20 +39,18 @@
 
         if (localStorage.getItem("tipoUsuario") == "cliente") {
             listaMenu.innerHTML = `
-                <li><a href=\"forum.html\">Fórum</a></li>
                 <li><a href=\"conteudo.html\">Conteúdos</a></li>
                 <li><a href=\"perfil.html\">Meu Perfil</a></li>
                 <li><a href=\"favoritos.html\">Favoritos</a></li>
+                <li><a href=\"forum.html\">Fórum</a></li>
                 <li><a href=\"index.html\">Sair</a></li>`
         } else {
             listaMenu.innerHTML = `
             <li><a href=\"conteudo.html\">Meu Conteúdo</a></li>
-            <li><a href=\"#\">Adicionar Conteúdo</a></li>
-            <li><a href=\"#\">Categorias</a></li>
+            <li><a href=\"app_createtopic\">Adicionar Conteúdo</a></li>
             <li><a href=\"forum.html\">Fórum</a></li>
             <li><a href=\"perfi.html\">Meu Perfil</a></li>
-            <li><a href=\"index.html\">Sair</a></li>
-            `
+            <li><a href=\"index.html\">Sair</a></li>  `
         }
 
         const contentGrid = document.getElementById("content-grid");
