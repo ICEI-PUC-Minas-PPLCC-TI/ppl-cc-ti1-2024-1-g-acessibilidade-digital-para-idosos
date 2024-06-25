@@ -214,16 +214,6 @@
   "favoritos": [
     {
       "UserId": 2,
-      "id": "1",
-      "titulo": "Como enviar e-mails",
-      "imagem": "img/email.png",
-      "categorias": [
-        "Comunicação",
-        "E-mail"
-      ]
-    },
-    {
-      "UserId": 2,
       "id": "4",
       "titulo": "Como usar o Zoom",
       "imagem": "img/zoom.jpeg",
@@ -253,41 +243,24 @@
       ]
     },
     {
-      "id": "8",
+      "id": "1",
       "UserId": 2,
-      "titulo": "Criando uma conta de e-mail",
-      "imagem": "img/conta.png",
+      "titulo": "Como enviar e-mails",
+      "imagem": "img/email.png",
       "categorias": [
-        "E-mail",
-        "Comunicação"
+        "Comunicação",
+        "E-mail"
       ]
-    }
-  ],
-  "cliente": [
-    {
-      "id": "1",
-      "nome": "João",
-      "usuario": "joao1"
     },
     {
-      "id": "2",
-      "nome": "Maria",
-      "senha": "senha456",
-      "usuario": "maria2"
-    }
-  ],
-  "admin": [
-    {
       "id": "1",
-      "nome": "Matheus",
-      "senha": "admin123",
-      "usuario": "matheus1"
-    },
-    {
-      "id": "2",
-      "nome": "Admin 2",
-      "senha": "admin456",
-      "usuario": "admin2"
+      "UserId": 2,
+      "titulo": "Como enviar e-mails",
+      "imagem": "img/email.png",
+      "categorias": [
+        "Comunicação",
+        "E-mail"
+      ]
     }
   ]
 }
