@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Create Topic</title>
+<title>Criar Tópico</title>
 <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             display: flex;
-            flex-direction: row;
             min-height: 100vh;
             overflow-x: hidden;
         }
@@ -71,12 +70,12 @@
         }
 
         .main-content {
-            margin-right: 220px; 
+            margin-left: 220px;
             padding: 20px;
-            flex-grow: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
+            flex-grow: 1;
         }
 
         h1 {
@@ -133,7 +132,7 @@
         }
         
         .save-button {
-            background-color: #4CAF50;
+            background-color: blue;
             color: white;
             padding: 5px 10px;
             border: none;
@@ -170,27 +169,30 @@
             margin-bottom: 10px;
         }
 
-  form {
-    width: 500px;
-    margin: 20px auto;
-  }
+        form {
+            width: 500px;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-  form input,
-  form textarea,
-  form select,
-  form button {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-  }
+        form input,
+        form textarea,
+        form select,
+        form button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
 
-  form button {
-    background-color: #0056b3;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
+        form button {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
 </style>
 </head>
 <body>
@@ -198,15 +200,17 @@
   <div class="navbar">
     <div class="logo">
       <img src="img/logo_redonda.png" alt="Logo do Site">
-  </div>
-   <ul id="lista-menu">
+    </div>
+    <ul id="lista-menu">
       <li><a href="conteudo.html">Menu Principal</a></li>
-      <li><a href="app_createtopic.html">Adicionar contéudo</a></li>
+      <li><a href="app_createtopic.html">Adicionar conteúdo</a></li>
       <li><a href="app_edittopic.html">Editar tópico</a></li>
+      <li><a href="app_sendmessage.html">Criar Mensagem</a></li>
       <li><a href="index.html">Sair</a></li>
+    </ul>
   </div>
 
-<div class="content">
+<div class="main-content">
   <h1>Criar Tópico</h1>
   <form id="topicForm">
     <label for="titulo">Título:</label>
@@ -248,7 +252,7 @@ formObject.categorias = categorias;
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(Object.fromEntries(formData.entries())),
+    body: JSON.stringify(formObject),
   })
     .then(response => response.json())
     .then(data => {
