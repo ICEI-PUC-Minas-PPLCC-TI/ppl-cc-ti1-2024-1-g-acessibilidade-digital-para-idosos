@@ -69,8 +69,8 @@
             background-color: #0056b3;
         }
 
-        .main-content {
-            margin-right: 220px; 
+        .content {
+            margin-left: 220px; /* Ajuste para compensar a largura da navbar */
             padding: 20px;
             flex-grow: 1;
             display: flex;
@@ -82,152 +82,55 @@
             margin-top: 20px;
         }
 
-        .message-container {
+        form {
+            width: 500px;
+            margin: 50px auto;
+        }
+
+        form input,
+        form textarea,
+        form select,
+        form button {
+            display: block;
             width: 100%;
-            max-width: 800px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            margin-top: 10px;
         }
-        
-        .message {
-            border: 1px solid #ddd;
-            border-radius: 5px;
+
+        form button {
+            background-color: blue; /* Mesma cor da navbar */
+            color: white;
+            border: none;
             padding: 10px;
-            margin-bottom: 10px;
-            position: relative;
-        }
-        
-        .message-header {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        
-        .message-body {
-            margin-bottom: 5px;
-        }
-        
-        .delete-button {
-            background-color: #ff3333;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 5px 10px;
             cursor: pointer;
-            margin-top: 5px;
-        }
-        
-        .edit-button {
-            background-color: #4CAF50; /* Green */
-            border: none;
-            color: white;
-            padding: 5px 10px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 12px;
-            border-radius: 5px;
-            cursor: pointer;
-            position: absolute;
-            top: 5px;
-            right: 5px;
-          
-        }
-        
-        .save-button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 5px 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 12px;
-            margin-right: 5px;
-            margin-top: 10px;
         }
 
-        .cancel-button {
-            background-color: #ccc;
-            color: black;
-            padding: 5px 10px;
+        #backToForum {
+            background-color: blue; /* Mesma cor da navbar */
+            color: white;
             border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 12px;
-            margin-top: 10px;
-        }
-
-        .edit-area {
-            display: none;
-            flex-direction: column;
-            margin-top: 10px;
-        }
-        
-        .edit-content {
-            width: 100%;
             padding: 10px;
-            font-size: 14px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-bottom: 10px;
+            cursor: pointer;
+            width: 100%; /* Largura total do formulário */
+            margin-top: 20px; /* Espaço extra acima do botão */
+            text-align: center; /* Centralizar texto */
         }
-
-  form {
-    width: 500px;
-    margin: 20px auto;
-  }
-
-  form input,
-  form textarea,
-  form select,
-  form button {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  form button {
-    background-color: #0056b3;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
-
-  form {
-    width: 500px;
-    margin: 20px auto;
-  }
-
-  form input,
-  form textarea,
-  form select,
-  form button {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  form button {
-    background-color: #4698CB;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
 </style>
 </head>
 <body>
 
-  <div class="navbar">
+<div class="navbar">
     <div class="logo">
       <img src="img/logo_redonda.png" alt="Logo do Site">
   </div>
    <ul id="lista-menu">
       <li><a href="conteudo.html">Menu Principal</a></li>
-      <li><a href="app_createtopic.html">Adicionar contéudo</a></li>
+      <li><a href="app_createtopic.html">Adicionar conteúdo</a></li>
       <li><a href="app_edittopic.html">Editar tópico</a></li>
+      <li><a href="app_sendmessage.html">Criar Mensagem</a></li>
       <li><a href="index.html">Sair</a></li>
-  </div>
-
+    </ul>
+</div>
 
 <div class="content">
   <h1>Editar Tópico</h1>
