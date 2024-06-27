@@ -161,22 +161,16 @@
       "autor": "Carla"
     },
     {
-      "id": "4",
-      "titulo": "Como limpar cache de aplicativos",
-      "conteudo": "Alguém pode me explicar como limpar o cache de aplicativos no meu smartphone? Está ficando lento.",
-      "autor": "Luiz"
-    },
-    {
       "id": "5",
       "titulo": "Como ativar o modo noturno",
       "conteudo": "Estou com dificuldades para encontrar a opção de ativar o modo noturno no meu telefone. Alguma dica?",
       "autor": "Mariana"
     },
     {
-      "id": "f678",
       "titulo": "OLa grupo",
+      "autor": "neide",
       "conteudo": "achei muito legal a plataforma. ass Neide",
-      "autor": "neide"
+      "id": "f678"
     },
     {
       "id": "6581",
@@ -208,6 +202,16 @@
       "categorias": [
         "Comunicação",
         "E-mail"
+      ]
+    },
+    {
+      "UserId": 2,
+      "id": "2",
+      "titulo": "Navegação na Internet",
+      "imagem": "img/Internet.png",
+      "categorias": [
+        "Internet",
+        "Pesquisa"
       ]
     }
   ],
