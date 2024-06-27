@@ -233,26 +233,6 @@
       ]
     },
     {
-      "id": "3",
-      "UserId": 2,
-      "titulo": "Uso do WhatsApp",
-      "imagem": "img/whatsapp.png",
-      "categorias": [
-        "Comunicação",
-        "Mensagens"
-      ]
-    },
-    {
-      "id": "1",
-      "UserId": 2,
-      "titulo": "Como enviar e-mails",
-      "imagem": "img/email.png",
-      "categorias": [
-        "Comunicação",
-        "E-mail"
-      ]
-    },
-    {
       "id": "1",
       "UserId": 2,
       "titulo": "Como enviar e-mails",
@@ -280,16 +260,6 @@
       "categorias": [
         "Comunicação",
         "Mensagens"
-      ]
-    },
-    {
-      "id": "1",
-      "UserId": 2,
-      "titulo": "Como enviar e-mails",
-      "imagem": "img/email.png",
-      "categorias": [
-        "Comunicação",
-        "E-mail"
       ]
     }
   ]
