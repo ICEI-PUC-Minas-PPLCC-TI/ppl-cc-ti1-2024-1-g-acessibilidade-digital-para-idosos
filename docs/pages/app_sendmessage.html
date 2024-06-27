@@ -5,84 +5,124 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Create Message</title>
 <style>
-  body {
+body {
     margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
-  }
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
 
-  .navbar {
-    background-color: #4698CB;
-    height: 100vh;
+.navbar {
     width: 200px;
-    position: fixed;
-    left: 0;
-    top: 0;
+    background-color: blue;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
-  }
-
-  .navbar button {
-    background-color: white;
-    color: #4698CB;
-    border: none;
-    padding: 10px;
-    margin: 10px 0;
-    cursor: pointer;
-    width: 80%;
-  }
-
-  .content {
-    margin-left: 200px;
+    justify-content: flex-start;
     padding: 20px;
-  }
+    top: 0;
+    left: 0;
+    bottom: 0;
+    color: white;
+}
 
-  form {
+.navbar .logo {
+    margin-bottom: 20px;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.navbar ul li {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+}
+
+.navbar ul li a:hover {
+    background-color: #0056b3;
+}
+
+.content {
+    margin-left: 220px; /* Ajuste para compensar a largura da navbar */
+    padding: 20px;
+}
+
+form {
     width: 500px;
     margin: 50px auto;
-  }
+}
 
-  form input,
-  form textarea,
-  form select,
-  form button {
+form input,
+form textarea,
+form select,
+form button {
     display: block;
     width: 100%;
     margin-bottom: 25px;
     margin-top: 10px;
-  }
+}
 
-  form button {
-    background-color: #4698CB;
+form button {
+    background-color: blue; /* Mesma cor da navbar */
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
-  }
+}
 
-  #backToForum {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background-color: #4698CB;
+#backToForum {
+    background-color: blue; /* Mesma cor da navbar */
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
-    width: 200px;
-    margin-left:207px;
-  }
+    width: 100%; /* Largura total do formulário */
+    margin-top: 20px; /* Espaço extra acima do botão */
+    text-align: center; /* Centralizar texto */
+}
 </style>
 </head>
 <body>
 
-  <div class="navbar">
-    <button onclick="location.href='#'">Conteúdos</button>
-    <button onclick="location.href='#'">Meu Perfil</button>
-    <button onclick="location.href='#'">Favoritos</button>
-  </div>
+<div class="navbar">
+  <div class="logo">
+    <img src="img/logo_redonda.png" alt="Logo do Site">
+</div>
+    <ul>
+        <li><a href="conteudo.html">Menu Principal</a></li>
+        <li><a href="app_createtopic.html">Adicionar conteúdo</a></li>
+        <li><a href="app_edittopic.html">Editar tópico</a></li>
+        <li><a href="app_sendmessage.html">Criar Mensagem</a></li>
+        <li><a href="index.html">Sair</a></li>
+    </ul>
+</div>
 
 <div class="content">
   <h1>Digite aqui sua dúvida</h1>
@@ -94,12 +134,9 @@
     <textarea id="conteudo" name="conteudo"></textarea>
 
     <button type="submit">Enviar</button>
-    <button id="backToForum" onclick="location.href='#'"> <- Voltar ao Fórum</button>
-
+    <button id="backToForum" onclick="location.href='FORUM.html'" type="button">Voltar ao Fórum</button>
   </form>
-
 </div>
-
 
 <script>
 document.getElementById('messageForm').addEventListener('submit', function(event) {
