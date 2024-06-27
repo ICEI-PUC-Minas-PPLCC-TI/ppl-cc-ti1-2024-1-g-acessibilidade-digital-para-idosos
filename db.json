@@ -261,6 +261,26 @@
         "Comunicação",
         "E-mail"
       ]
+    },
+    {
+      "UserId": 2,
+      "id": "9",
+      "titulo": "Segurança na Internet",
+      "imagem": "img/securit.png",
+      "categorias": [
+        "Segurança",
+        "Internet"
+      ]
+    },
+    {
+      "UserId": 2,
+      "id": "3",
+      "titulo": "Uso do WhatsApp",
+      "imagem": "img/whatsapp.png",
+      "categorias": [
+        "Comunicação",
+        "Mensagens"
+      ]
     }
   ]
 }
