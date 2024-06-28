@@ -550,19 +550,16 @@
                 <h5>Funcionalidade 2 - Envio de mensagens</h5>
                 <p>Permite o envio de uma mensagem no fórum, que pode conter uma dúvida, pergunta ou sugestão de conteúdos para a plataforma.</p>
                 <ul class="list-unstyled">
-                  <li><strong>Estrutura de dados: </strong><a href="#ti_ed_mensagem">Topicos</a></li>
+                  <li><strong>Estrutura de dados: </strong><a href="#ti_ed_mensagem">Mensagens</a></li>
                   <li><strong>Instruções de acesso: </strong><ul>
-                    <li>Abra o site e efetue o login como administrador. Login de exemplo para testes: usuário alice01, senha 1234.</li>
-                    <li>Na barra de navegação lateral, você deve clicar em Criar Tópico.</li>
-                    <li>Em seguida, digite as informações do tópico a ser adicionado e adicione-o ao banco de conteúdos clicando no botão Criar.</li>
-                    <li>Para editar o tópico, vá para o painel de conteúdos pelo botão Menu Principal da barra de navegação.</li>
-                    <li>Escolha o tópico que você quer editar clicando no card do tópico.</li>
-                    <li>Ao ser redirecionado a tela de edição, faça as alterações e salve-as pelo botão Salvar Alterações.</li>
+                    <li>Ao logar como staff ou cliente, vá para o Fórum de Mensagens através do botão "Fórum" na barra de navegação.</li>
+                    <li>Embaixo dos tópicos, ao fim da tela, o botão "Enviar mensagem" te direcionará a pagina de enviar mensagem.</li>
+                    <li>Digite o título da mensagem a conteúdo que deseja enviar e clique em "Enviar".</li>
+                    <li>Sua mensagem terá sido postada, e o botão "Voltar ao Fórum" te redirecionará para este.</li>
 
                   </ul></li>
                 </ul>
-                <p class="text-center"><img class="img-fluid" src="assets/images/criar_topico.png" alt="Tela Cadastro de Topicos"></p>
-                <p class="text-center"><img class="img-fluid" src="assets/images/editar_topico.png" alt="Tela Edição de Topicos"></p>
+                <p class="text-center"><img class="img-fluid" src="assets/images/enviar_mensagem.png" alt="Tela Cadastro de Topicos"></p>
               </section>
             </section>
 
@@ -592,7 +589,7 @@
               </section>
 
               <section>
-                <h5 id="ti_ed_topicos">Estrutura de Dados - Mensagens</h5>
+                <h5 id="ti_ed_mensagem">Estrutura de Dados - Mensagens</h5>
                 <p>Mensagens no Fórum de dúvidas e sugestões de conteúdos.</p>
                 <pre>
                   {
@@ -619,22 +616,15 @@
               <section>
                 <h5>Images:</h5>
                 <ul>
-                  <li>Unsplash - <a target="_blank" href="https://unsplash.com/">https://unsplash.com/</a><span class="exemplo">EXEMPLO</span></li>
-                </ul>
-              </section>
-
-              <section>
-                <h5>Fonts:</h5>
-                <ul>
-                  <li>Icons Font Face - <a target="_blank" href="https://fontawesome.com/">https://fontawesome.com/</a><span class="exemplo">EXEMPLO</span></li>
+                  <li>Getty Images - <a target="_blank" href="https://www.gettyimages.com.br/search/2/image?family=creative&phrase=idosa"></a>https://www.gettyimages.com.br/</li>
                 </ul>
               </section>
 
               <section>
                 <h5>Scripts:</h5>
                 <ul>
-                  <li>jQuery - <a target="_blank" href="http://www.jquery.com/">http://www.jquery.com/</a><span class="exemplo">EXEMPLO</span></li>
-                  <li>Bootstrap 4 - <a target="_blank" href="http://getbootstrap.com/">http://getbootstrap.com/</a><span class="exemplo">EXEMPLO</span></li>
+                  <li>jQuery - <a target="_blank" href="http://www.jquery.com/"></a>http://www.jquery.com/</li>
+                  <li>Json Server - <a target="_blank" href="https://www.npmjs.com/package/json-server"></a>https://www.npmjs.com/package/json-server</li>
                 </ul>
               </section>
             </section>
@@ -652,46 +642,34 @@
               <p>Apresente uma lista de perguntas e respostas comuns associadas ao projeto. Inclua perguntas como: (1) detalhes de acesso e uso do projeto; (2) informações sobre a instalação e configuração da aplicação; (3) questões sobre a manutenção da aplicação; (4) detalhes sobre a integração da aplicação com outros sistemas; (5) questões sobre a segurança da aplicação.</p>
             </div>
 
-            <span class="exemplo">EXEMPLO</span>
             <div class="row">
               <div class="col-lg-12">
                 <div class="accordion accordion-alterate arrow-right" id="popularTopics">
                   <div class="card">
                     <div class="card-header" id="heading1">
                       <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse1"
-                          aria-expanded="false" aria-controls="collapse1">What does royalty free mean?</a> </h5>
+                          aria-expanded="false" aria-controls="collapse1">O que acontece se o idoso esquecer o login da plataforma?</a> </h5>
                     </div>
                     <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#popularTopics">
-                      <div class="card-body"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                        printer took a galley of type and scrambled it to make a type specimen book. It has survived not
-                        only five centuries, but also the leap into electronic typesetting, remaining essentially
-                        unchanged. </div>
+                      <div class="card-body"> Na tela de login haverá um botão que redireciona para o whatsapp do Staff do Senior Tech, onde ele pode ligar, mandar mensagem ou gravar um áudio solicitando ajuda ou a redefinição de sua senha.</div>
                     </div>
                   </div>
                   <div class="card">
                     <div class="card-header" id="heading2">
                       <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse2"
-                          aria-expanded="false" aria-controls="collapse2">What is a single application?</a> </h5>
+                          aria-expanded="false" aria-controls="collapse2">Se mensagens forem mandadas por engano ou discursos ofensivos forem proferidos no fórum, o que acontece?</a> </h5>
                     </div>
                     <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#popularTopics">
-                      <div class="card-body"> Iisque Anim pariatur cliche reprehenderit, enim eiusmod high life
-                        accusamus terry richardson ad squid. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
-                        moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch
-                        et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-                        proident. Ad vegan excepteur butcher vice lomo. </div>
+                      <div class="card-body"> A equipe do Senior Tech estará sempre atenta as mensagens mandadas no fórum, e tem a permissão para excluir mensagens de tom desagradável para que o ambiente do Senior Tech seja sempre um lugar de troca, inclusão e conhecimento.</div>
                     </div>
                   </div>
                   <div class="card">
                     <div class="card-header" id="heading3">
                       <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse3"
-                          aria-expanded="false" aria-controls="collapse3">What are some examples of permitted end
-                          products?</a> </h5>
+                          aria-expanded="false" aria-controls="collapse3">Qual a frequência de postagem de novos tópicos de conteúdo?</a> </h5>
                     </div>
                     <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#popularTopics">
-                      <div class="card-body"> Iisque persius interesset his et, in quot quidam persequeris vim, ad mea
-                        essent possim iriure. Mutat tacimates id sit. Ridens mediocritatem ius an, eu nec magna
-                        imperdiet. </div>
+                      <div class="card-body"> A inclusão de novos conteúdos será feita semanalmente ou a medida que surgir a demanda através do fórum ou contato por Whatsapp. Conteúdos podem ser priorizados devido a recorrência da dúvida ou removidos devido a falta de acesso ou engajamento dos clientes.</div>
                     </div>
                   </div>
                 </div>
