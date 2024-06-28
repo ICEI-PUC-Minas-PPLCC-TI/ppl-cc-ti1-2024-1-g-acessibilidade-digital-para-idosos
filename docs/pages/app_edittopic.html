@@ -5,69 +5,132 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Editar Tópico</title>
 <style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: row;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
 
-  .navbar {
-    background-color: #4698CB;
-    height: 100vh;
-    width: 200px;
-    position: fixed;
-    left: 0;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
-  }
+        .navbar {
+            width: 200px;
+            background-color: blue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            color: white;
+        }
 
-  .navbar button {
-    background-color: white;
-    color: #4698CB;
-    border: none;
-    padding: 10px;
-    margin: 10px 0;
-    cursor: pointer;
-    width: 80%;
-  }
+        .navbar .logo {
+            margin-bottom: 20px;
+            width: 75%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-  .content {
-    margin-left: 200px; /* Largura da navbar */
-    padding: 20px;
-  }
+        .navbar .logo img {
+            max-width: 100%;
+            height: auto;
+        }
 
-  form {
-    width: 500px;
-    margin: 20px auto;
-  }
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
 
-  form input,
-  form textarea,
-  form select,
-  form button {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-  }
+        .navbar ul li {
+            width: 100%;
+            text-align: center;
+            margin: 10px 0;
+        }
 
-  form button {
-    background-color: #4698CB;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px 0;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #0056b3;
+        }
+
+        .content {
+            margin-left: 220px; /* Ajuste para compensar a largura da navbar */
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        form {
+            width: 500px;
+            margin: 50px auto;
+        }
+
+        form input,
+        form textarea,
+        form select,
+        form button {
+            display: block;
+            width: 100%;
+            margin-bottom: 25px;
+            margin-top: 10px;
+        }
+
+        form button {
+            background-color: blue; /* Mesma cor da navbar */
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        #backToForum {
+            background-color: blue; /* Mesma cor da navbar */
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%; /* Largura total do formulário */
+            margin-top: 20px; /* Espaço extra acima do botão */
+            text-align: center; /* Centralizar texto */
+        }
 </style>
 </head>
 <body>
 
-  <div class="navbar">
-    <button onclick="location.href='#'">Menu</button>
-    <button onclick="location.href='app_createtopic.html'">Novo Conteúdo</button>
+<div class="navbar">
+    <div class="logo">
+      <img src="img/logo_redonda.png" alt="Logo do Site">
   </div>
+   <ul id="lista-menu">
+      <li><a href="conteudo.html">Menu Principal</a></li>
+      <li><a href="app_createtopic.html">Adicionar conteúdo</a></li>
+      <li><a href="app_edittopic.html">Editar tópico</a></li>
+      <li><a href="app_sendmessage.html">Criar Mensagem</a></li>
+      <li><a href="index.html">Sair</a></li>
+    </ul>
+</div>
 
 <div class="content">
   <h1>Editar Tópico</h1>

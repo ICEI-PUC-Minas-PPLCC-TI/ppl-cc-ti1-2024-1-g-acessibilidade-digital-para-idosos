@@ -6,14 +6,11 @@ const port = 3001;
 
 app.use(express.json());
 
-// Carregar db.json da raiz do projeto
 const dbPath = path.join(__dirname, 'db.json');
 let db = JSON.parse(fs.readFileSync(dbPath));
 
-// Middleware para servir arquivos estáticos
 app.use(express.static(path.join(__dirname, 'docs/pages')));
 
-// Obter todos os favoritos
 app.get('/favoritos', (req, res) => {
     const favoritos = db.favoritos.map(fav => {
         const topico = db.topicos.find(top => top.id === fav.topicoId);
@@ -22,7 +19,6 @@ app.get('/favoritos', (req, res) => {
     res.json(favoritos);
 });
 
-// Adicionar aos favoritos
 app.post('/favoritos', (req, res) => {
     const { UserId, topico } = req.body;
 
@@ -45,7 +41,7 @@ app.post('/favoritos', (req, res) => {
     res.status(201).json(novoFavorito);
 });
 
-// Iniciar o servidor
+
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
 });
