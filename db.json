@@ -182,21 +182,53 @@
   "usuarios": [
     {
       "UserId": 1,
-      "nome": "Alice"
+      "nome": "Alice",
+      "nome_usuario": "alice01",
+      "senha": "1234",
+      "tipo_usuario": "admin",
+      "id": "f25a"
     },
     {
       "UserId": 2,
-      "nome": "Bob"
+      "nome": "Bob",
+      "nome_usuario": "bob01",
+      "senha": "1234",
+      "tipo_usuario": "cliente",
+      "id": "1fd4"
     },
     {
       "UserId": 3,
-      "nome": "Charlie"
+      "nome": "Charlie",
+      "nome_usuario": "charlie01",
+      "senha": "1234",
+      "tipo_usuario": "cliente",
+      "id": "d2b6"
     }
   ],
   "favoritos": [
     {
       "UserId": 2,
+      "id": "4",
+      "titulo": "Como usar o Zoom",
+      "imagem": "img/zoom.jpeg",
+      "categorias": [
+        "Comunicação",
+        "Videoconferência"
+      ]
+    },
+    {
+      "id": "2",
+      "UserId": 2,
+      "titulo": "Navegação na Internet",
+      "imagem": "img/Internet.png",
+      "categorias": [
+        "Internet",
+        "Pesquisa"
+      ]
+    },
+    {
       "id": "1",
+      "UserId": 2,
       "titulo": "Como enviar e-mails",
       "imagem": "img/email.png",
       "categorias": [
@@ -206,40 +238,23 @@
     },
     {
       "UserId": 2,
-      "id": "2",
-      "titulo": "Navegação na Internet",
-      "imagem": "img/Internet.png",
+      "id": "9",
+      "titulo": "Segurança na Internet",
+      "imagem": "img/securit.png",
       "categorias": [
-        "Internet",
-        "Pesquisa"
+        "Segurança",
+        "Internet"
       ]
-    }
-  ],
-  "cliente": [
-    {
-      "id": 1,
-      "nome": "João",
-      "usuario": "joao1"
     },
     {
-      "id": 2,
-      "nome": "Maria",
-      "senha": "senha456",
-      "usuario": "maria2"
-    }
-  ],
-  "admin": [
-    {
-      "id": 1,
-      "nome": "Matheus",
-      "senha": "admin123",
-      "usuario": "matheus1"
-    },
-    {
-      "id": 2,
-      "nome": "Admin 2",
-      "senha": "admin456",
-      "usuario": "admin2"
+      "UserId": 2,
+      "id": "3",
+      "titulo": "Uso do WhatsApp",
+      "imagem": "img/whatsapp.png",
+      "categorias": [
+        "Comunicação",
+        "Mensagens"
+      ]
     }
   ]
 }

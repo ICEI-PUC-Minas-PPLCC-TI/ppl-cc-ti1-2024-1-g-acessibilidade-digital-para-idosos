@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdo</title>
+    <link rel="stylesheet" href="./styles.css">
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="img/logo_redonda.png" alt="Logo do Site">
+        </div>
+        <ul id="lista-menu">
+            <li><a href="conteudo.html">Conteúdos</a></li>
+            <li><a href="perfil.html">Meu Perfil</a></li>
+            <li><a href="favoritos.html">Favoritos</a></li>
+            <li><a href="forum.html">Fórum</a></li>
+            <li><a href="index.html">Sair</a></li>
+        </ul>
+    </div>
+    <div class="search-bar">
+        <input type="text" class="search-input" id="searchInput">
+        <button class="search-button" onclick="search()">Search</button>
+    </div>
+    <div class="menu-bar">
+        <div class="menu" onclick="toggleMenu()">Categorias</div>
+        <div class="menu-options" id="menuOptions">
+            <!-- Categoria opções serão adicionadas aqui -->
+        </div>
+    </div>
+    <div class="content-grid" id="content-grid">
+        <!-- Cards do grid serão adicionados aqui -->
+    </div>
+
+    <script>
+        var listaMenu = document.getElementById("lista-menu");
+
+        if (localStorage.getItem("tipoUsuario") == "cliente") {
+            listaMenu.innerHTML = `
+                <li><a href=\"conteudo.html\">Conteúdos</a></li>
+                <li><a href=\"perfil.html\">Meu Perfil</a></li>
+                <li><a href=\"favoritos.html\">Favoritos</a></li>
+                <li><a href=\"forum.html\">Fórum</a></li>
+                <li><a href=\"index.html\">Sair</a></li>`
+        } else {
+            listaMenu.innerHTML = `
+            <li><a href=\"conteudo.html\">Meu Conteúdo</a></li>
+            <li><a href=\"app_createtopic\">Adicionar Conteúdo</a></li>
+            <li><a href=\"forum.html\">Fórum</a></li>
+            <li><a href=\"perfi.html\">Meu Perfil</a></li>
+            <li><a href=\"index.html\">Sair</a></li>  `
+        }
+
+        const contentGrid = document.getElementById("content-grid");
+        const inputSearch = document.querySelector(".search-input");
+        const menuOptions = document.getElementById("menuOptions");
+
+        let items = [];
+
+        const categories = [
+            "Todas as categorias", "Comunicação", "E-mail", "Internet", "Pesquisa", "Mensagens",
+            "Videoconferência", "Redes Sociais", "Navegação", "Mapas",
+            "Tecnologia", "Celulares", "Segurança", "Videochamadas",
+            "Computadores", "Entretenimento", "Vídeos", "Fotografia", "Acessibilidade"
+        ];
+
+        function toggleMenu() {
+            if (menuOptions.style.display === "none" || menuOptions.style.display === "") {
+                menuOptions.style.display = "flex";
+            } else {
+                menuOptions.style.display = "none";
+            }
+        }
+
+        function filterByCategory(category) {
+            contentGrid.innerHTML = ""; // Limpa o conteúdo atual
+
+            if (category === "Todas as categorias") {
+                items.forEach(item => addHTML(item));
+            } else {
+                items
+                    .filter(item => item.categorias.includes(category))
+                    .forEach(item => addHTML(item));
+            }
+        }
+
+        function addHTML(item) {
+            const div = document.createElement("div");
+            div.classList.add("col-md-4", "mb-4");
+            div.innerHTML = `
+                <div class="card h-100">
+                    <img src="${item.imagem}" class="card-img-top img-fluid" alt="Imagem do Repositório">
+                    <div class="card-body">
+                        <h5 class="card-title">${item.titulo}</h5>
+                        <button class="favorite-button" onclick="addToFavorites('${item.id}')">Favoritar</button>
+                    </div>
+                </div>
+            `;
+            contentGrid.appendChild(div);
+        }
+
+        inputSearch.oninput = () => {
+            contentGrid.innerHTML = "";
+
+            items
+                .filter(item => item.titulo.toLowerCase().includes(inputSearch.value.toLowerCase()))
+                .forEach(item => addHTML(item));
+        };
+
+        fetch("http://localhost:3001/topicos")
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(item => {
+                    addHTML(item);
+                    items.push(item);
+                });
+            })
+            .catch(error => {
+                console.error("Erro ao carregar JSON:", error);
+            });
+
+        categories.forEach(category => {
+            const div = document.createElement("div");
+            div.classList.add("menu-option");
+            div.textContent = category;
+            div.onclick = () => {
+                filterByCategory(category);
+                toggleMenu();
+            };
+            menuOptions.appendChild(div);
+        });
+
+        function addToFavorites(id) {
+            const item = items.find(item => item.id === id.toString());
+            if (item) {
+                const { id, titulo, imagem, categorias } = item;
+                fetch('http://localhost:3001/favoritos', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        UserId: 2,
+                        id: id.toString(),
+                        titulo: titulo,
+                        imagem: imagem,
+                        categorias: categorias
+                    })
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        alert("Item adicionado aos favoritos!");
+                    })
+                    .catch(error => {
+                        console.error("Erro ao adicionar aos favoritos:", error);
+                    });
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,12 +1,15 @@
 {
-  "name": "nodejs",
+  "name": "seu-projeto",
   "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
   "scripts": {
     "start": "concurrently \"http-server docs/pages -p 3000 -o -c-1\" \"json-server --watch db.json --port 3001\""
   },
   "dependencies": {
-    "concurrently": "^6.2.1",
-    "http-server": "^14.0.0",
-    "json-server": "^0.17.4"
+    "concurrently": "^8.2.2",
+    "express": "^4.17.1",
+    "http-server": "^14.1.1",
+    "json-server": "^1.0.0-beta.1"
   }
 }
