@@ -545,6 +545,25 @@
                 <p class="text-center"><img class="img-fluid" src="assets/images/criar_topico.png" alt="Tela Cadastro de Topicos"></p>
                 <p class="text-center"><img class="img-fluid" src="assets/images/editar_topico.png" alt="Tela Edição de Topicos"></p>
               </section>
+              
+              <section>
+                <h5>Funcionalidade 2 - Envio de mensagens</h5>
+                <p>Permite o envio de uma mensagem no fórum, que pode conter uma dúvida, pergunta ou sugestão de conteúdos para a plataforma.</p>
+                <ul class="list-unstyled">
+                  <li><strong>Estrutura de dados: </strong><a href="#ti_ed_mensagem">Topicos</a></li>
+                  <li><strong>Instruções de acesso: </strong><ul>
+                    <li>Abra o site e efetue o login como administrador. Login de exemplo para testes: usuário alice01, senha 1234.</li>
+                    <li>Na barra de navegação lateral, você deve clicar em Criar Tópico.</li>
+                    <li>Em seguida, digite as informações do tópico a ser adicionado e adicione-o ao banco de conteúdos clicando no botão Criar.</li>
+                    <li>Para editar o tópico, vá para o painel de conteúdos pelo botão Menu Principal da barra de navegação.</li>
+                    <li>Escolha o tópico que você quer editar clicando no card do tópico.</li>
+                    <li>Ao ser redirecionado a tela de edição, faça as alterações e salve-as pelo botão Salvar Alterações.</li>
+
+                  </ul></li>
+                </ul>
+                <p class="text-center"><img class="img-fluid" src="assets/images/criar_topico.png" alt="Tela Cadastro de Topicos"></p>
+                <p class="text-center"><img class="img-fluid" src="assets/images/editar_topico.png" alt="Tela Edição de Topicos"></p>
+              </section>
             </section>
 
             <!-- Estruturas de dados =============== -->
@@ -573,17 +592,16 @@
               </section>
 
               <section>
-                <h5>Estrutura de Dados - Usuários<span class="exemplo">EXEMPLO</span></h5>
-                <p>Registro dos usuários do sistema utilizados para login e para o perfil do sistema</p>
+                <h5 id="ti_ed_topicos">Estrutura de Dados - Mensagens</h5>
+                <p>Mensagens no Fórum de dúvidas e sugestões de conteúdos.</p>
                 <pre>
                   {
-                    id: "eed55b91-45be-4f2c-81bc-7686135503f9"
-                    email: "admin@abc.com"
-                    id: "eed55b91-45be-4f2c-81bc-7686135503f9"
-                    login: "admin"
-                    nome: "Administrador do Sistema"
-                    senha: "123"
-                  }
+                    id: "1",
+                    titulo: "Não sei enviar emails",
+                    conteudo: "Não to conseguindo enviar o email pro meu
+                    filho. Não sei onde clica pra escrever um email novo.",
+                    autor: "Sonia Chagas"
+                    }
                 </pre>
               </section>
             </section>
