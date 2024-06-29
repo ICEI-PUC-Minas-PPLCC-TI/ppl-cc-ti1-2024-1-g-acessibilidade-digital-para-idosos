@@ -3,22 +3,22 @@ cff-version: 1.0.1
 message: Please cite this software using these metadata.
 title: Acessibilidade digital para idosos
 authors: Giovanna
-  - family-names: Naves Ribeiro
-    given-names: Giovanna
-  - family-names: Rocha Viana
-    given-names: Matheus Filipe
-  - family-names: Maximo Machado
-    given-names: Bruno
-  - family-names: Tiradentes Sousa e Silva
-    given-names: Vitor
+  - family-names: "Naves Ribeiro"
+    given-names: "Giovanna"
+  - family-names: "Rocha Viana"
+    given-names: "Matheus Filipe"
+  - family-names: "Maximo Machado"
+    given-names: "Bruno"
+  - family-names: "Tiradentes Sousa e Silva"
+    given-names: "Vitor"
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: Viera Carneiro
-    given-names: Rommel
+    family-names: "Viera Carneiro"
+    given-names: "Rommel"
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: Simões Silva 
-    given-names: Tamara
+    family-names: "Simões Silva" 
+    given-names: "Tamara"
 keywords: 
 repository-code: 
 license: CC-BY-4.0
