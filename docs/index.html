@@ -563,6 +563,37 @@
               </section>
             </section>
 
+            <section>
+                <h5>Funcionalidade 3 - Exibição do grid de tópicos com busca</h5>
+                <p>Essa funcionalidade permite o usuário escolher o conteúdo de seu desejo. Essa parte apresenta todos os conteúdos disponíveis, também possui uma barra de pesquisa e um menu de categorias, para que o usuário tenha a possibilidade de filtrar ou pesquisar o conteúdo de seu desejo para assim facilitar a busca.</p>
+                <ul class="list-unstyled">
+                  <li><strong>Estrutura de dados: </strong><a href="db.json">"topicos</a></li>
+                  <li><strong>Instruções de acesso: </strong><ul>
+                    <li>Abra o site e efetue o login como cliente. Login de exemplo para testes: usuário bob01, senha 1234.</li>
+                    <li>Na barra de navegação lateral, você deve clicar em Conteúdo.</li>
+                    <li>Em seguida, você pode olhar todos os cards com os conteúdos disponíveis e utlizar a barra de pesquisa ou o menu de categorias.</li>
+                
+                  </ul></li>
+                </ul>
+                <p class="text-center"><img class="img-fluid" src="assets/images/conteudos.png" alt="Tela de Conteúdos"></p>
+              </section>
+
+              <section>
+                <h5>Funcionalidade 4 - Favoritar e exibição de Favoritos</h5>
+                <p>Essa funcionalidade permite o usuário favoritar o conteúdo de seu maior interesse. Sendo assim, torna-se uma forma de facilitar o uso do nosso site, pois possibilita que os itens de maior interesse do usuário seja separado em uma parte separada de todos os outros cards. Além disso, essa seção conta com uma barra de pesquisa e menu de categorias, assim como a parte de conteúdos.</p>
+                <ul class="list-unstyled">
+                  <li><strong>Estrutura de dados: </strong><a href="db.json">"favoritos</a></li>
+                  <li><strong>Instruções de acesso: </strong><ul>
+                    <li>Abra o site e efetue o login como cliente. Login de exemplo para testes: usuário bob01, senha 1234.</li>
+                    <li>Na barra de navegação lateral, você deve clicar em Conteúdo.</li>
+                    <li>Em seguida, você pode olhar todos os cards com os conteúdos disponíveis e selecionar um item para favoritar, após isso somente clicar no botão Favoritar para ele aparecer na seção de Favoritos.</li>
+                    <li>Após isso, clique em Favoritos na navbar para poder visualizar o item favorito.</li>
+                
+                  </ul></li>
+                </ul>
+                <p class="text-center"><img class="img-fluid" src="assets/images/favoritoss.png" alt="Tela de Conteúdos"></p>
+              </section>
+            
             <!-- Estruturas de dados =============== -->
             <section id="ti_estruturas_dados">
               <h4>Estruturas de Dados</h4>
@@ -599,6 +630,42 @@
                     filho. Não sei onde clica pra escrever um email novo.",
                     autor: "Sonia Chagas"
                     }
+                </pre>
+              </section>
+            </section>
+
+             <section>
+                <h5 id="topicos"> Estrutura de Dados - topicos </h5>
+                <p>Exibição do grid de tópicos com busca</p>
+                <pre>
+                 {
+                 "id": "1",
+                 "titulo": "Como enviar e-mails",
+                 "conteudo": "Aprenda passo a passo como enviar e-mails para se comunicar com amigos e familiares. Passo 1: Abra o seu programa de e-mail. Passo 2: Clique em 'Escrever' ou 'Nova mensagem'. Passo 3: Digite o endereço de e-mail do destinatário na linha 'Para'. Passo 4: Escreva o assunto do e-mail na linha 'Assunto'. Passo 5: Digite sua mensagem na área de texto principal. Passo 6: Clique em 'Enviar' para enviar o e-mail.",
+                 "imagem": "img/email.png",
+                 "categorias": [
+                 "Comunicação",
+                 "E-mail"
+                  ]
+                }
+                </pre>
+              </section>
+            </section>
+
+           <section>
+                <h5 id="favoritos"> Estrutura de Dados - Favoritos </h5>
+                <p>Favoritar e exibição de Favoritos</p>
+                <pre>
+                 {
+                 "UserId": 2,
+                 "id": "4",
+                 "titulo": "Como usar o Zoom",
+                 "imagem": "img/zoom.jpeg",
+                 "categorias": [
+                 "Comunicação",
+                 "Videoconferência"
+                  ]
+                 }
                 </pre>
               </section>
             </section>
