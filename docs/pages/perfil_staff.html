@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: row;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            width: 200px;
+            background-color: blue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            color: white;
+        }
+
+        .navbar .logo {
+            margin-bottom: 20px;
+            width: 75%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar .logo img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        .navbar ul li {
+            width: 100%;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px 0;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #0056b3;
+        }
+
+        .main-content {
+            margin-left: 220px; 
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        .foto-container {
+            border: 5px solid #ddd;
+            border-radius: 50%;
+            width: 160px;
+            height: 160px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .foto-container img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .nome-usuario, .senha-usuario {
+            font-size: 24px;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .senha-usuario {
+            font-size: 18px;
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .change-photo-button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #0751ff;
+            color: white;
+        }
+
+        .input-foto {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="img/logo_redonda.png" alt="Logo do Site">
+        </div>
+        <ul>
+            <li><a href="conteudo_staff.html">Meu Conteúdo</a></li>
+            <li><a href="app_createtopic.html">Adicionar Conteúdo</a></li>
+            <li><a href="forum_staff.html">Fórum</a></li>
+            <li><a href="perfil_staff.html">Meu Perfil</a></li>
+            <li><a href="index.html">Sair</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <h1>Meu Perfil</h1>
+        <div class="foto-container">
+            <img id="foto-usuario" src="" alt="Foto do Usuário">
+        </div>
+        <button class="change-photo-button" id="change-photo-button">Editar Foto</button>
+        <input type="file" id="input-foto" class="input-foto" accept="image/*">
+        <h1 class="nome-usuario" id="nome-usuario"> Fulano de Tal</h1>
+        <p class="senha-usuario" id="senha-usuario">+55 3399830948</p>
+    </div>
+
+    <script>
+        const fetchUserData = async () => {
+            try {
+                const response = await fetch('http://localhost:3001/perfil'); // Ajuste o ID conforme necessário
+                if (response.ok) {
+                    const usuario = await response.json();
+                    document.getElementById('nome-usuario').innerText = usuario.nome;
+                    document.getElementById('senha-usuario').innerText = `Senha: ${usuario.Senha}`;
+
+                    const fotoSalva = localStorage.getItem('foto-usuario');
+                    if (fotoSalva) {
+                        document.getElementById('foto-usuario').src = fotoSalva;
+                    } else {
+                        document.getElementById('foto-usuario').src = usuario.foto;
+                    }
+                } else {
+                    console.error('Erro ao buscar dados do usuário:', response.status);
+                }
+            } catch (error) {
+                console.error('Erro ao buscar dados do usuário:', error);
+            }
+        };
+
+        window.onload = () => {
+            fetchUserData();
+
+            document.getElementById('change-photo-button').addEventListener('click', () => {
+                document.getElementById('input-foto').click(); 
+            });
+
+            document.getElementById('input-foto').addEventListener('change', (event) => {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const newFoto = e.target.result;
+                        document.getElementById('foto-usuario').src = newFoto;
+                        localStorage.setItem('foto-usuario', newFoto); 
+                    }
+                    reader.readAsDataURL(file);
+                }
+            });
+        };
+    </script>
+</body>
+</html>
