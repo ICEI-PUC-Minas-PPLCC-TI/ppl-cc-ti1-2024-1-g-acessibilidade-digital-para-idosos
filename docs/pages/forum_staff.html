@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórum</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: row;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            width: 200px;
+            background-color: blue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            color: white;
+        }
+
+        .navbar .logo {
+            margin-bottom: 20px;
+            width: 75%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar .logo img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        .navbar ul li {
+            width: 100%;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px 0;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #0056b3;
+        }
+
+        .main-content {
+            margin-left: 220px; 
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        .message-container {
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+        
+        .message {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        
+        .message-header {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .message-body {
+            margin-bottom: 5px;
+        }
+        
+        .delete-button {
+            background-color: #ff3333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        
+        .edit-button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+        
+        .save-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            margin-right: 5px;
+            margin-top: 10px;
+        }
+
+        .cancel-button {
+            background-color: #ccc;
+            color: black;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+        .edit-area {
+            display: none;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+        
+        .edit-content {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .add-message-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .add-message-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="img/logo_redonda.png" alt="Logo do Site">
+        </div>
+        <ul>
+            <li><a href="conteudo_staff.html">Meu Conteúdo</a></li>
+            <li><a href="app_createtopic.html">Adicionar Conteúdo</a></li>
+            <li><a href="forum_staff.html">Fórum</a></li>
+            <li><a href="perfil_staff.html">Meu Perfil</a></li>
+            <li><a href="index.html">Sair</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <h1>Fórum</h1>
+        <div id="message-container" class="message-container"></div>
+        <a href="sendmessage_staff.html" class="add-message-button">Enviar mensagem</a>
+    </div>
+
+    <script>
+        const fetchMessages = async () => {
+            try {
+                const response = await fetch('http://localhost:3001/mensagens'); // Altere o endpoint conforme necessário
+                if (response.ok) {
+                    const mensagens = await response.json();
+                    displayMessages(mensagens);
+                } else {
+                    console.error('Erro ao buscar mensagens do fórum:', response.status);
+                }
+            } catch (error) {
+                console.error('Erro ao buscar mensagens do fórum:', error);
+            }
+        };
+
+        const displayMessages = (mensagens) => {
+            const messageContainer = document.getElementById('message-container');
+            messageContainer.innerHTML = '';
+            mensagens.forEach(mensagem => {
+                const mensagemDiv = document.createElement('div');
+                mensagemDiv.classList.add('message');
+                mensagemDiv.setAttribute('data-id', mensagem.id); // Adicione um atributo para identificação
+                mensagemDiv.innerHTML = `
+                    <p class="message-header" id="title-${mensagem.id}">Título: ${mensagem.titulo}</p>
+                    <p class="message-header" id="author-${mensagem.id}">Autor: ${mensagem.autor}</p>
+                    <p class="message-body" id="content-${mensagem.id}">Conteúdo: ${mensagem.conteudo}</p>
+                    <button class="delete-button" onclick="deleteMessage('${mensagem.id}')">Excluir</button>
+                    <button class="edit-button" onclick="toggleEdit('${mensagem.id}')">Editar</button>
+                    <div class="edit-area" id="edit-area-${mensagem.id}">
+                        <input class="edit-content" id="edit-title-${mensagem.id}" value="${mensagem.titulo}">
+                        <input class="edit-content" id="edit-author-${mensagem.id}" value="${mensagem.autor}">
+                        <textarea class="edit-content" id="edit-content-${mensagem.id}">${mensagem.conteudo}</textarea>
+                        <button class="save-button" onclick="saveEdit('${mensagem.id}')">Salvar</button>
+                        <button class="cancel-button" onclick="toggleEdit('${mensagem.id}')">Cancelar</button>
+                    </div>
+                `;
+                messageContainer.appendChild(mensagemDiv);
+            });
+        };
+
+        const deleteMessage = async (messageId) => {
+            try {
+                const response = await fetch(`http://localhost:3001/mensagens/${messageId}`, {
+                    method: 'DELETE'
+                });
+                if (response.ok) {
+                    fetchMessages(); // Atualiza a lista de mensagens após a exclusão
+                } else {
+                    console.error('Erro ao excluir mensagem:', response.status);
+                }
+            } catch (error) {
+                console.error('Erro ao excluir mensagem:', error);
+            }
+        };
+
+        const toggleEdit = (messageId) => {
+            const editArea = document.getElementById(`edit-area-${messageId}`);
+            const titleParagraph = document.getElementById(`title-${messageId}`);
+            const authorParagraph = document.getElementById(`author-${messageId}`);
+            const contentParagraph = document.getElementById(`content-${messageId}`);
+            if (editArea.style.display === 'none' || !editArea.style.display) {
+                editArea.style.display = 'flex';
+                titleParagraph.style.display = 'none';
+                authorParagraph.style.display = 'none';
+                contentParagraph.style.display = 'none';
+            } else {
+                editArea.style.display = 'none';
+                titleParagraph.style.display = 'block';
+                authorParagraph.style.display = 'block';
+                contentParagraph.style.display = 'block';
+            }
+        };
+
+        const saveEdit = async (messageId) => {
+            const newTitle = document.getElementById(`edit-title-${messageId}`).value;
+            const newAuthor = document.getElementById(`edit-author-${messageId}`).value;
+            const newContent = document.getElementById(`edit-content-${messageId}`).value;
+            try {
+                const response = await fetch(`http://localhost:3001/mensagens/${messageId}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ titulo: newTitle, autor: newAuthor, conteudo: newContent })
+                });
+                if (response.ok) {
+                    fetchMessages(); // Atualiza a lista de mensagens após a edição
+                } else {
+                    console.error('Erro ao editar mensagem:', response.status);
+                }
+            } catch (error) {
+                console.error('Erro ao editar mensagem:', error);
+            }
+        };
+
+        window.onload = () => {
+            fetchMessages();
+        };
+    </script>
+</body>
+</html>
