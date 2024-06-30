@@ -174,6 +174,7 @@
 <body>
     <div class="navbar">
         <div class="logo">
+<<<<<<< Updated upstream
             <img src="img/logo_redonda.png" alt="Logo do Site">
         </div>
         <ul>
@@ -182,6 +183,15 @@
             <li><a href="favoritos.html">Favoritos</a></li>
             <li><a href="forum.html">Fórum</a></li>
             <li><a href="index.html">Sair</a></li>
+=======
+            <img src="logo_redonda.png" alt="Logo do Site">
+        </div>
+        <ul>
+            <li><a href="conteudos.html">Conteúdos</a></li>
+            <li><a href="perfil.html">Meu Perfil</a></li>
+            <li><a href="favoritos.html">Favoritos</a></li>
+            <li><a href="forum.html">Fórum</a></li>
+>>>>>>> Stashed changes
         </ul>
     </div>
 
@@ -193,10 +203,17 @@
     <script>
         const fetchMessages = async () => {
             try {
+<<<<<<< Updated upstream
                 const response = await fetch('http://localhost:3001/mensagens'); // Altere o endpoint conforme necessário
                 if (response.ok) {
                     const mensagens = await response.json();
                     displayMessages(mensagens);
+=======
+                const response = await fetch('http://localhost:3000/mensagens'); // Altere o endpoint conforme necessário
+                if (response.ok) {
+                    const mensagensForum = await response.json();
+                    displayMessages(mensagensForum);
+>>>>>>> Stashed changes
                 } else {
                     console.error('Erro ao buscar mensagens do fórum:', response.status);
                 }
@@ -205,10 +222,17 @@
             }
         };
 
+<<<<<<< Updated upstream
         const displayMessages = (mensagens) => {
             const messageContainer = document.getElementById('message-container');
             messageContainer.innerHTML = '';
             mensagens.forEach(mensagem => {
+=======
+        const displayMessages = (mensagensForum) => {
+            const messageContainer = document.getElementById('message-container');
+            messageContainer.innerHTML = '';
+            mensagensForum.forEach(mensagem => {
+>>>>>>> Stashed changes
                 const mensagemDiv = document.createElement('div');
                 mensagemDiv.classList.add('message');
                 mensagemDiv.setAttribute('data-id', mensagem.id); // Adicione um atributo para identificação
@@ -232,7 +256,11 @@
 
         const deleteMessage = async (messageId) => {
             try {
+<<<<<<< Updated upstream
                 const response = await fetch(`http://localhost:3001/mensagens/${messageId}`, {
+=======
+                const response = await fetch(`http://localhost:3000/mensagens/${messageId}`, {
+>>>>>>> Stashed changes
                     method: 'DELETE'
                 });
                 if (response.ok) {
@@ -268,7 +296,11 @@
             const newAuthor = document.getElementById(`edit-author-${messageId}`).value;
             const newContent = document.getElementById(`edit-content-${messageId}`).value;
             try {
+<<<<<<< Updated upstream
                 const response = await fetch(`http://localhost:3001/mensagens/${messageId}`, {
+=======
+                const response = await fetch(`http://localhost:3000/mensagens/${messageId}`, {
+>>>>>>> Stashed changes
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'
