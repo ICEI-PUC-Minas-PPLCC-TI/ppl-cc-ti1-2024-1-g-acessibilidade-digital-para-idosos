@@ -59,7 +59,7 @@
       {
         "id": "6",
         "titulo": "Uso do Google Maps",
-        "conteudo": "",
+        "conteudo": "Saiba como ultilizar o Google Maps para encontrar rotas e explorar locais ao redor do mundo com facilidade. Passo 1: No celular abra o aplicativo do Google Maps. Passo 2: Digite o nome ou endereço na barra de busca e toque na lupa. Passo 3: Toque em Como chegar e depois coloque o ponto de partida e o destino. Passo 4: Siga as instruções no mapa para chegar ao destino. ",
         "imagem": "img/maps.png",
         "link": [""],
         "categorias": [
@@ -70,7 +70,7 @@
       {
         "id": "7",
         "titulo": "Como utilizar smartphones",
-        "conteudo": "",
+        "conteudo": "Saiba como ultilizar o smartphones para diversão e ultilidade no dia-a-dia. Passo 1: Ter um smartphone ou Iphone. Passo 2: Adicionar um ship caso seja necessário. Passo 3: Adicionar um número para ser de seu uso. Passo 4: Ter um plano mensal para poder ultilizar a internet. Passo 5: Baixar aplicativos do seu gosto e se divertir!",
         "imagem": "img/smartphone.jpg",
         "link": [""],
         "categorias": [
@@ -81,7 +81,7 @@
       {
         "id": "8",
         "titulo": "Criando uma conta de e-mail",
-        "conteudo": "",
+        "conteudo": "Saiba como criar uma conta no email. Passo 1: Escolher um provedor seja ele Gmail, Outlook, Yahoo etc... Passo 2: Acessar o site do provedor escolhido. Passo 3: Encontrar a opção de criar conta. Passo 4: Preencher o formulário com as informações solicitadas, sejam elas do tipo Nome, Data de Nascimento, Senha etc... Passo 5: Verificar sua conta. Passo 6: Finalizar sua conta clicando em Criar conta, e pronto!!",
         "imagem": "img/conta.png",
         "link": [""],
         "categorias": [
@@ -92,7 +92,7 @@
       {
         "id": "9",
         "titulo": "Segurança na Internet",
-        "conteudo": "",
+        "conteudo": "Saiba como ter segurança usando a internet. Passo 1: Usar senhas longas e complexas, misturando letras, números e símbolos. Passo 2: Mantenha seus dispositivos e softwares sempre atualizados. Passo 3: Use redes Wi-Fi seguras e evite redes públicas sem proteção. Passo 4: Ajuste as configurações de privacidade das suas contas. Passo 5: Cuidado com ofertas e promoções que parecem boas demais para ser verdade.",
         "imagem": "img/securit.png",
         "link": [""],
         "categorias": [
@@ -103,7 +103,7 @@
       {
         "id": "10",
         "titulo": "Utilizando o Skype",
-        "conteudo": "",
+        "conteudo": "Saiba como ultilizar o Skype e poder ter ligações e chamadas de vídeo com quem deseja! Passo 1: Baixe o Skype do site oficial e instale no seu dispositivo. Passo 2: Abra o Skype e crie uma conta ou faça login com uma conta existente. Passo 3: Para adicionar contatos procure e adicione contatos usando o nome, e-mail ou número de telefone. Passo 4: Para fazer chamada, selecione um contato e clique no ícone de chamada de voz ou vídeo. Passo 5: Para mandar mensagem clique em um contato e envie mensagens de texto no chat. ",
         "imagem": "img/skype.jpeg",
         "link": [""],
         "categorias": [
@@ -114,7 +114,7 @@
       {
         "id": "11",
         "titulo": "Configurações básicas de computadores",
-        "conteudo": "",
+        "conteudo": "Saiba as configurações básicas dos computadores. Passo 1: Todo computador possui sua base que é chamada de CPU. Passo 2: Existe também a memória RAM da máquina que é usada para guardar e armazenar dados temporários. Passo 3: Tem o Disco Rígido que ele armazena dados permanentemente. Passo 4: Tem o Sistema Operacional que controla o hardware e permite que programas sejam executados. Passo 5: Existem os cabos e portas que conectam os componentes internos e externos do computador. ",
         "imagem": "img/computador.jpeg",
         "link": [""],
         "categorias": [
@@ -125,7 +125,7 @@
       {
         "id": "12",
         "titulo": "Fazendo buscas na Internet",
-        "conteudo": "",
+        "conteudo": "Saiba como fazer buscas na internet, para encontrar tudo que deseja! Passo 1: Abra um Navegador: Como Chrome, Firefox, Safari, pois é nele onde tudo começa. Passo 2: Digite na Barra de Endereço ou Pesquisa: Coloque o que você quer procurar. Passo 3: Pressione Enter: Isso vai mostrar os resultados na tela. Passo 4: Clique nos Resultados: Escolha um link para ver mais informações o que mais lhe interessa.",
         "imagem": "img/pesquisa.jpeg",
         "link": [""],
         "categorias": [
