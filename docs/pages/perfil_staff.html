@@ -147,28 +147,34 @@
     <div class="main-content">
         <h1>Meu Perfil</h1>
         <div class="foto-container">
-            <img id="foto-usuario" src="" alt="Foto do Usuário">
+            <img id="foto-usuario" src="img/placeholder.png" alt="Foto do Usuário">
         </div>
         <button class="change-photo-button" id="change-photo-button">Editar Foto</button>
         <input type="file" id="input-foto" class="input-foto" accept="image/*">
-        <h1 class="nome-usuario" id="nome-usuario"> Fulano de Tal</h1>
-        <p class="senha-usuario" id="senha-usuario">+55 3399830948</p>
+        <h1 class="nome-usuario" id="nome-usuario">Fulano de Tal</h1>
+        <p class="senha-usuario" id="senha-usuario">Senha: ******</p>
     </div>
 
     <script>
-        const fetchUserData = async () => {
+        const fetchUserData = async (userId) => {
             try {
-                const response = await fetch('http://localhost:3001/perfil'); // Ajuste o ID conforme necessário
+                const response = await fetch('http://localhost:3001/usuarios');
                 if (response.ok) {
-                    const usuario = await response.json();
-                    document.getElementById('nome-usuario').innerText = usuario.nome;
-                    document.getElementById('senha-usuario').innerText = `Senha: ${usuario.Senha}`;
+                    const data = await response.json();
+                    const usuario = data.find(user => user.UserId === userId);
 
-                    const fotoSalva = localStorage.getItem('foto-usuario');
-                    if (fotoSalva) {
-                        document.getElementById('foto-usuario').src = fotoSalva;
+                    if (usuario) {
+                        document.getElementById('nome-usuario').innerText = usuario.nome; // Exibir "nome"
+                        document.getElementById('senha-usuario').innerText = `Senha: ${usuario.senha}`;
+
+                        const fotoSalva = localStorage.getItem('foto-usuario');
+                        if (fotoSalva) {
+                            document.getElementById('foto-usuario').src = fotoSalva;
+                        } else {
+                            document.getElementById('foto-usuario').src = "img/placeholder.png";
+                        }
                     } else {
-                        document.getElementById('foto-usuario').src = usuario.foto;
+                        console.error('Usuário não encontrado');
                     }
                 } else {
                     console.error('Erro ao buscar dados do usuário:', response.status);
@@ -178,26 +184,31 @@
             }
         };
 
-        window.onload = () => {
-            fetchUserData();
+        window.addEventListener('load', () => {
+            const userId = parseInt(localStorage.getItem('UserId'), 10); // Obtendo UserId do localStorage
+            if (!isNaN(userId)) {
+                fetchUserData(userId);
+            } else {
+                console.error('UserId não encontrado no localStorage');
+            }
 
             document.getElementById('change-photo-button').addEventListener('click', () => {
-                document.getElementById('input-foto').click(); 
+                document.getElementById('input-foto').click();
             });
 
             document.getElementById('input-foto').addEventListener('change', (event) => {
                 const file = event.target.files[0];
                 if (file) {
                     const reader = new FileReader();
-                    reader.onload = function(e) {
+                    reader.onload = (e) => {
                         const newFoto = e.target.result;
                         document.getElementById('foto-usuario').src = newFoto;
-                        localStorage.setItem('foto-usuario', newFoto); 
-                    }
+                        localStorage.setItem('foto-usuario', newFoto);
+                    };
                     reader.readAsDataURL(file);
                 }
             });
-        };
+        });
     </script>
 </body>
 </html>
