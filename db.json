@@ -180,7 +180,8 @@
       "nome_usuario": "alice01",
       "senha": "1234",
       "tipo_usuario": "admin",
-      "id": "f25a"
+      "id": "f25a",
+      "foto": ""
     },
     {
       "UserId": 2,
@@ -188,7 +189,8 @@
       "nome_usuario": "bob01",
       "senha": "1234",
       "tipo_usuario": "cliente",
-      "id": "1fd4"
+      "id": "1fd4",
+      "foto": ""
     },
     {
       "UserId": 3,
@@ -196,7 +198,8 @@
       "nome_usuario": "charlie01",
       "senha": "1234",
       "tipo_usuario": "cliente",
-      "id": "d2b6"
+      "id": "d2b6",
+      "foto": ""
     }
   ],
   "favoritos": [
