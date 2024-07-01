@@ -159,22 +159,10 @@
   ],
   "mensagens": [
     {
-      "id": "1",
-      "titulo": "Como configurar o Wi-Fi",
-      "conteudo": "Olá, estou tendo dificuldades em configurar o Wi-Fi no meu novo smartphone. Alguém pode me ajudar com isso?",
-      "autor": "Ana"
-    },
-    {
       "conteudo": "Pessoal, estou com problemas para salvar novos contatos no meu telefone. Alguém sabe como fazer isso? Não estou conseguindo",
       "titulo": "Como salvar contatos",
       "autor": "Pedro",
       "id": "2"
-    },
-    {
-      "id": "3",
-      "titulo": "Como configurar um alarme",
-      "conteudo": "Ei pessoal, estou tentando configurar um alarme no meu celular, mas não estou conseguindo. Alguma ajuda?",
-      "autor": "Carla"
     },
     {
       "id": "5",
