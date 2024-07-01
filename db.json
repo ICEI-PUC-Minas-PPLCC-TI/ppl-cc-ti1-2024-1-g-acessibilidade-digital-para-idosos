@@ -14,17 +14,11 @@
       ]
     },
     {
-      "id": "2",
-      "titulo": "Navegação na Internet",
+      "titulo": "Como navegar na Internet",
       "conteudo": "Saiba como navegar na internet para encontrar informações úteis e interessantes. Passo 1: Abra o seu navegador da web (por exemplo, Google Chrome, Mozilla Firefox). Passo 2: Na barra de endereços, digite o site que deseja visitar. Passo 3: Pressione 'Enter' para acessar o site. Passo 4: Use os botões 'Voltar' e 'Avançar' para navegar entre as páginas. Passo 5: Clique em links para acessar diferentes seções do site. Passo 6: Para pesquisar, digite sua consulta na barra de pesquisa e pressione 'Enter'.",
       "imagem": "img/Internet.png",
-      "link": [
-        "https://www.youtube.com/embed/lKUJm0tktPE"
-      ],
-      "categorias": [
-        "Internet",
-        "Pesquisa"
-      ]
+      "categorias": [],
+      "id": "2"
     },
     {
       "id": "3",
@@ -53,17 +47,11 @@
       ]
     },
     {
-      "id": "5",
-      "titulo": "Utilizando o Facebook",
+      "titulo": "Como  utilizar o Facebook",
       "conteudo": "Saiba como utilizar o Facebook para se manter conectado com amigos e familiares e encontrar conteúdo interessante. Passo 1: Faça login na sua conta do Facebook. Passo 2: No feed de notícias, você verá postagens de seus amigos e páginas que segue. Passo 3: Para interagir com uma postagem, você pode clicar em 'Curtir', 'Comentar' ou 'Compartilhar'. Passo 4: Para encontrar amigos, use a barra de pesquisa no topo da página. Passo 5: Para publicar uma postagem, clique em 'Criar postagem' e digite o que deseja compartilhar.",
       "imagem": "img/facebook.webp",
-      "link": [
-        "https://www.youtube.com/embed/xqPGsDr78N8"
-      ],
-      "categorias": [
-        "Redes Sociais",
-        "Comunicação"
-      ]
+      "categorias": [],
+      "id": "5"
     },
     {
       "id": "6",

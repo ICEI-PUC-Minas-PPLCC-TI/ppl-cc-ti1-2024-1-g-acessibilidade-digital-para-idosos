@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const formObject = Object.fromEntries(formData.entries());
     formObject.categorias = categorias;
 
-    fetch(`http://localhost:3000/topicos/${topicId}`, {
+    fetch(`http://localhost:3001/topicos/${topicId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
