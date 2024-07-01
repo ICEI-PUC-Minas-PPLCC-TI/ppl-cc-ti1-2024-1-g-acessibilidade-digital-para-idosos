@@ -597,7 +597,6 @@
                 <h5>Funcionalidade 5 - Nav Bar dinâmica de acordo com o suário logado.</h5>
                 <p>Permite exibir uma nav bar específica para cada usuário de forma dinâmica, se for cliente direciona para uma. Se for Staff direciona para outra.</p>
                 <ul class="list-unstyled">
-                  <li><strong>Estrutura de dados: </strong><a href="#ti_ed_mensagem">Mensagens</a></li>
                   <li><strong>Instruções de acesso: </strong><ul>
                     <li>Primeiro passo é escolher os usuários ja cadastrados seja ele CLIENTE ou do tipo STAFF</li>
                     <li>Logando com a senha e usuário de cliente abre na nav bar destinada para aquele usuário.</li>
@@ -607,6 +606,33 @@
                 <p class="text-center"><img class="img-fluid" src="assets/images/navbar.png" alt="Tela de Conteúdos"></p>
               </section>
 
+              <section>
+                <h5>Funcionalidade 6 - Exibição de perfil do Usuario.</h5>
+                <p>Ao clicar em 'Meu Perfil' na barra de navegação, o perfil do usuário é exibido na tela, mostrando uma imagem, o nome do usuário logado e sua senha.</p>
+                <ul class="list-unstyled">
+                  <li><strong>Estrutura de dados: </strong><a href="#ti_ed_Perfil">Perfil</a></li>
+                  <li><strong>Instruções de acesso: </strong><ul>
+                    <li>Logue-se com o seu nome de usuário e senha.</li>
+                    <li>Após logar, a opção 'Meu Perfil' será exibida na barra de navegação específica para o seu tipo de usuário (cliente ou staff).</li>
+                    <li>Clique em 'Meu Perfil' para acessar sua página de perfil.</li>
+                  </ul></li>
+                </ul>
+                <p class="text-center"><img class="img-fluid" src="assets/images/perfilfuncionalidade.png" alt="Tela de Conteúdos"></p>
+              </section>
+
+              <section>
+                <h5>Funcionalidade 7 - Exibição, exclusão e edição de mensagens do Fórum.</h5>
+                <p>Ao clicar em 'Forum' na NavBar, o usuario será encaminhado para as mensagens do fórum, onde ele poderá ler as mensagens ja postadas, editar e excluir sua mensagem.</p>
+                <ul class="list-unstyled">
+                  <li><strong>Estrutura de dados: </strong><a href="#ti_ed_Forum">Forum</a></li>
+                  <li><strong>Instruções de acesso: </strong><ul>
+                    <li>Logue-se com o seu nome de usuário e senha.</li>
+                    <li>Após logar, a opção 'Forum' será exibida na barra de navegação específica para o seu tipo de usuário (cliente ou staff).</li>
+                    <li>Clique em 'Forum' para acessar a pagina com mensagens do Fórum e interagir.</li>
+                  </ul></li>
+                </ul>
+                <p class="text-center"><img class="img-fluid" src="assets/images/forumfuncionalidades.png" alt="Tela de Conteúdos"></p>
+              </section>
             
             <!-- Estruturas de dados =============== -->
             <section id="ti_estruturas_dados">
@@ -664,25 +690,56 @@
                 }
                 </pre>
               </section>
+              
             </section>
 
+            <section>
+              <h5 id="ti_ed_Forum"> Estrutura de Dados - Mensagens Forum </h5>
+              <p>Dados para exibição de mensagens no Forum.</p>
+              <pre>
+                {
+                  "id": "1",
+                  "titulo": "Como configurar o Wi-Fi",
+                  "conteudo": "Olá, estou tendo dificuldades em configurar o Wi-Fi no meu novo smartphone. Alguém pode me ajudar com isso?",
+                  "autor": "Ana"
+                }
+              </pre>
+            </section>
+
+          </section>
            <section>
-                <h5 id="favoritos"> Estrutura de Dados - Favoritos </h5>
-                <p>Favoritar e exibição de Favoritos</p>
+                <h5 id="ti_ed_Perfil"> Estrutura de Dados - Perfil </h5>
+                <p>Dados para exibição de Perfil</p>
                 <pre>
-                 {
-                 "UserId": 2,
-                 "id": "4",
-                 "titulo": "Como usar o Zoom",
-                 "imagem": "img/zoom.jpeg",
-                 "categorias": [
-                 "Comunicação",
-                 "Videoconferência"
-                  ]
-                 }
+                  {
+                    "UserId": 1,
+                    "nome": "Alice",
+                    "nome_usuario": "alice01",
+                    "senha": "1234",
+                    "tipo_usuario": "admin",
+                    "id": "f25a",
+                  },
                 </pre>
               </section>
             </section>
+
+            <section>
+              <h5 id="favoritos"> Estrutura de Dados - Favoritos </h5>
+              <p>Favoritar e exibição de Favoritos</p>
+              <pre>
+               {
+               "UserId": 2,
+               "id": "4",
+               "titulo": "Como usar o Zoom",
+               "imagem": "img/zoom.jpeg",
+               "categorias": [
+               "Comunicação",
+               "Videoconferência"
+                ]
+               }
+              </pre>
+            </section>
+          </section>
 
             <!-- Módulos e APIs ================= -->
             <section id="ti_modulos_apis">
