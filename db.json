@@ -187,6 +187,12 @@
       "autor": "neide",
       "conteudo": "achei muito legal a plataforma. ass Neide",
       "id": "f678"
+    },
+    {
+      "id": "6581",
+      "titulo": "Bom dia",
+      "conteudo": "Que deus ilumine",
+      "autor": "Neide Rocha de Silva"
     }
   ],
   "usuarios": [
@@ -280,35 +286,6 @@
       ]
     },
     {
-<<<<<<< HEAD
-      "id": "3",
-      "UserId": 2,
-      "titulo": "Uso do WhatsApp",
-      "imagem": "img/whatsapp.png",
-      "categorias": [
-        "Comunicação",
-        "Mensagens"
-      ]
-    },
-    {
-      "id": "11",
-      "UserId": 2,
-      "titulo": "Configurações básicas de computadores",
-      "imagem": "img/computador.jpeg",
-      "categorias": [
-        "Tecnologia",
-        "Computadores"
-      ]
-    },
-    {
-      "id": "1",
-      "UserId": 2,
-      "titulo": "Como enviar e-mails",
-      "imagem": "img/email.png",
-      "categorias": [
-        "Comunicação",
-        "E-mail"
-=======
       "id": "2",
       "UserId": 2,
       "titulo": "Navegação na Internet",
@@ -316,7 +293,6 @@
       "categorias": [
         "Internet",
         "Pesquisa"
->>>>>>> 1588531e891550bea9bb4752198318f813df4db6
       ]
     }
   ]
