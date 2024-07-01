@@ -280,6 +280,7 @@
       ]
     },
     {
+<<<<<<< HEAD
       "id": "3",
       "UserId": 2,
       "titulo": "Uso do WhatsApp",
@@ -307,6 +308,15 @@
       "categorias": [
         "Comunicação",
         "E-mail"
+=======
+      "id": "2",
+      "UserId": 2,
+      "titulo": "Navegação na Internet",
+      "imagem": "img/Internet.png",
+      "categorias": [
+        "Internet",
+        "Pesquisa"
+>>>>>>> 1588531e891550bea9bb4752198318f813df4db6
       ]
     }
   ]
