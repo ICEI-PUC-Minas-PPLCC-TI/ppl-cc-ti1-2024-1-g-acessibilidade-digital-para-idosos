@@ -161,7 +161,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   const urlParams = new URLSearchParams(window.location.search);
   //const topicId = urlParams.get('id');
-  const topicId = 5787;
+  const topicId = 3;
   // Buscar os dados do tópico existente
   fetch(`http://localhost:3000/topicos/${topicId}`)
     .then(response => response.json())
