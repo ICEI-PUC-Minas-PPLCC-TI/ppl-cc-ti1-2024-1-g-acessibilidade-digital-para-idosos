@@ -98,7 +98,7 @@
         }
 
         form button {
-            background-color: blue; /* Mesma cor da navbar */
+            background-color: blue;
             color: white;
             border: none;
             padding: 10px;
@@ -106,14 +106,14 @@
         }
 
         #backToForum {
-            background-color: blue; /* Mesma cor da navbar */
+            background-color: blue;
             color: white;
             border: none;
             padding: 10px;
             cursor: pointer;
-            width: 100%; /* Largura total do formulário */
-            margin-top: 20px; /* Espaço extra acima do botão */
-            text-align: center; /* Centralizar texto */
+            width: 100%; 
+            margin-top: 20px; 
+            text-align: center;
         }
 </style>
 </head>
@@ -123,13 +123,13 @@
     <div class="logo">
       <img src="img/logo_redonda.png" alt="Logo do Site">
   </div>
-   <ul id="lista-menu">
-      <li><a href="conteudo.html">Menu Principal</a></li>
-      <li><a href="app_createtopic.html">Adicionar conteúdo</a></li>
-      <li><a href="app_edittopic.html">Editar tópico</a></li>
-      <li><a href="sendmessage_staff.html">Criar Mensagem</a></li>
-      <li><a href="index.html">Sair</a></li>
-    </ul>
+  <ul id="lista-menu">
+    <li><a href="conteudo_staff.html">Meu Conteúdo</a></li>
+    <li><a href="app_createtopic.html">Adicionar Conteúdo</a></li>
+    <li><a href="forum_staff.html">Fórum</a></li>
+    <li><a href="perfil_staff.html">Meu Perfil</a></li>
+    <li><a href="index.html">Sair</a></li>
+</ul>
 </div>
 
 <div class="content">
@@ -160,17 +160,16 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const urlParams = new URLSearchParams(window.location.search);
-  //const topicId = urlParams.get('id');
-  const topicId = 3;
-  // Buscar os dados do tópico existente
-  fetch(`http://localhost:3000/topicos/${topicId}`)
+  const topicId = urlParams.get('id');
+  console.log(topicId);
+
+  fetch(`http://localhost:3001/topicos/${topicId}`)
     .then(response => response.json())
     .then(data => {
       document.getElementById('titulo').value = data.titulo;
       document.getElementById('conteudo').value = data.conteudo;
       document.getElementById('imagem').value = data.imagem;
       
-      // Selecionar as categorias atuais
       const categoriasElement = document.getElementById('categorias');
       data.categorias.forEach(categoria => {
         for (const option of categoriasElement.options) {
@@ -184,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
       console.error('Erro ao carregar o tópico:', error);
     });
 
-  // Enviar os dados atualizados do formulário
+
   document.getElementById('topicForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -192,7 +191,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const formData = new FormData(form);
     const categorias = Array.from(formData.getAll('categorias'));
 
-    // Criar um objeto a partir dos dados do formulário
     const formObject = Object.fromEntries(formData.entries());
     formObject.categorias = categorias;
 

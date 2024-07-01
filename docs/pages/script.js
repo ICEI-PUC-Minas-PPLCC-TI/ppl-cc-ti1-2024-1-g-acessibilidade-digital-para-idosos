@@ -18,13 +18,13 @@ async function handleLogin(event) {
         var usuario = data.find(usuario => usuario.nome_usuario === nome_usuario && usuario.senha === senha);
 
         if (usuario) {
-            localStorage.setItem("UserId", usuario.UserId);  // Armazenar o UserId no localStorage
+            localStorage.setItem("UserId", usuario.UserId);
             if (usuario.tipo_usuario == 'cliente') {
                 localStorage.setItem("tipoUsuario", "cliente");
                 window.location.href = './conteudo.html';
             } else if (usuario.tipo_usuario == 'admin') {
                 localStorage.setItem("tipoUsuario", "admin");
-                window.location.href = './conteudo.html';
+                window.location.href = './conteudo_staff.html';
             } else {
                 alert('Tipo de usuário desconhecido');
             }

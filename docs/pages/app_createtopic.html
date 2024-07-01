@@ -247,7 +247,7 @@ document.getElementById('topicForm').addEventListener('submit', function(event) 
 const formObject = Object.fromEntries(formData.entries());
 formObject.categorias = categorias;
 
-  fetch('http://localhost:3000/topicos', {
+  fetch('http://localhost:3001/topicos', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

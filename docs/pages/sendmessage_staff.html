@@ -146,7 +146,7 @@ document.getElementById('messageForm').addEventListener('submit', function(event
   const messageObject = Object.fromEntries(formData.entries());
   messageObject.autor = userName;
 
-  fetch('http://localhost:3000/mensagens', {
+  fetch('http://localhost:3001/mensagens', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
