@@ -207,6 +207,12 @@
     }
   ],
   "favoritos": [
-
+    {
+      "UserId": 2,
+      "id": "2",
+      "titulo": "Como navegar na Internet",
+      "imagem": "img/Internet.png",
+      "categorias": []
+    }
   ]
 }
