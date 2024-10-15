@@ -1,17 +1,22 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="pt">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Login</title>
     <link rel="stylesheet" type="text/css" href="./login.css">
 </head>
 <body>
+    <div class="logo">
+        <img src="img/logo_redonda.png" alt="Logo do Site">
+    </div>
     <form id="loginForm">
         <div class="container">
-            <label for="nome_senha"><b>Nome de Usuário</b></label>
+            <label for="nome_usuario"><b>Nome de Usuário</b></label>
             <input type="text" placeholder="Insira seu nome de usuário" id="nome_usuario" required>
 
             <label for="senha"><b>Senha</b></label>
-            <input type="text" placeholder="Insira sua senha" id="senha" required>
+            <input type="password" placeholder="Insira sua senha" id="senha" required>
 
             <button type="submit">Login</button>
         </div>

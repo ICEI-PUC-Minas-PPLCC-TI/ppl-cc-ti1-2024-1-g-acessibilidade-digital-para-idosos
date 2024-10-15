@@ -25,7 +25,7 @@ if (gerarBtn) {
           messages: [
             {
               role: 'user',
-              content: `Gere um tutorial curto de ${titulo} sem utilizar negrito ou tamanhos variados de fonte. Inicie a resposta no passo 1. Depois, escreva "Link:" e sugira um link do YouTube que ensine o tópico`
+              content: `Gere um tutorial curto de ${titulo} sem utilizar negrito ou tamanhos variados de fonte. Inicie a resposta no passo 1. Depois, escreva "Link:" e sugira direto um link do YouTube que ensine o tópico`
             }
           ]
         })

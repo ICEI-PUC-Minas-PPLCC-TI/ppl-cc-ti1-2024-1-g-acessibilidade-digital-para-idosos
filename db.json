@@ -143,14 +143,6 @@
         "Internet",
         "Pesquisa"
       ]
-    },
-    {
-      "id": "1073",
-      "titulo": "Como mandar um email",
-      "conteudo": "Passo 1: Abra seu programa de e-mail ou aplicativo de e-mail no seu computador ou dispositivo móvel.\n\nPasso 2: Clique na opção para compor um novo e-mail. Geralmente, este botão está rotulado como \"Novo e-mail\", \"Escrever\" ou \"Compor\".\n\nPasso 3: No campo \"Para\", digite o endereço de e-mail do destinatário. Certifique-se de que está correto para evitar erros.\n\nPasso 4: No campo \"Assunto\", escreva uma breve descrição do conteúdo do seu e-mail. Isso ajuda o destinatário a entender do que se trata a mensagem antes de abri-la.\n\nPasso 5: No corpo do e-mail, escreva sua mensagem de forma clara e concisa. Comece com uma saudação, como \"Olá\" ou \"Prezado\", seguido pelo conteúdo do e-mail.\n\nPasso 6: Revise sua mensagem para verificar erros de digitação ou gramática.\n\nPasso 7: Clique no botão de enviar para enviar seu e-mail.",
-      "imagem": "",
-      "link": "https://www.youtube.com/watch?v=H8rPOsT5xoA",
-      "categorias": []
     }
   ],
   "mensagens": [
@@ -221,6 +213,16 @@
       "titulo": "Como navegar na Internet",
       "imagem": "img/Internet.png",
       "categorias": []
+    },
+    {
+      "id": "1",
+      "UserId": 2,
+      "titulo": "Como enviar e-mails",
+      "imagem": "img/email.png",
+      "categorias": [
+        "Comunicação",
+        "E-mail"
+      ]
     }
   ]
 }
