@@ -2,6 +2,7 @@ const form = document.getElementById('topicForm');
 const gerarBtn = document.getElementById('gerarBtn');
 const tituloInput = document.getElementById('titulo');
 const conteudoInput = document.getElementById('conteudo');
+const linkInput = document.getElementById('link');  // Campo para o link de vídeo
 
 if (gerarBtn) {
   gerarBtn.addEventListener('click', async () => {
@@ -17,14 +18,14 @@ if (gerarBtn) {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer bdda4200a7c948328cb8b3f6c800e27e`,  // Use sua chave API aqui
+          'Authorization': `Bearer eac59e502a694e88bff466e435a857b2`,  // Use sua chave API aqui
         },
         body: JSON.stringify({
           model: 'gpt-3.5-turbo',
           messages: [
             {
               role: 'user',
-              content: "Gere um passo a passo de até 8 passos para o tema a seguir, sem utilizar negrito ou tamanhos variados de fonte e já inicie sua resposta com o passo 1" + titulo // Usando o valor do campo título como o prompt
+              content: `Gere um tutorial curto de ${titulo} sem utilizar negrito ou tamanhos variados de fonte. Inicie a resposta no passo 1. Depois, escreva "Link:" e sugira um link do YouTube que ensine o tópico`
             }
           ]
         })
@@ -33,8 +34,17 @@ if (gerarBtn) {
       const result = await response.json();
       const message = result.choices[0].message.content;
       
+      const splitMessage = message.split('Link:');  // Dividindo a resposta entre o passo a passo e o link
+      const passos = splitMessage[0].trim();
+      const videoLink = splitMessage[1]?.trim();  // Link de vídeo, se existir
+
       // Coloca a resposta no campo "Conteúdo"
-      conteudoInput.value = message;
+      conteudoInput.value = passos;
+
+      // Se houver um link de vídeo na resposta, coloque no campo "Link"
+      if (videoLink) {
+        linkInput.value = videoLink;
+      }
 
     } catch (error) {
       console.error('Erro ao gerar resposta:', error);

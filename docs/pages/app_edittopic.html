@@ -141,8 +141,11 @@
     <label for="conteudo">Conteúdo:</label>
     <textarea id="conteudo" name="conteudo"></textarea>
 
-    <label for="imagem">URL da Imagem:</label>
+    <label for="imagem">Imagem:</label>
     <input type="text" id="imagem" name="imagem">
+
+    <label for="link">Vídeo:</label>
+    <input type="text" id="link" name="link">
 
     <label for="categorias">Categorias:</label>
     <select id="categorias" name="categorias" multiple>
@@ -169,6 +172,7 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('titulo').value = data.titulo;
       document.getElementById('conteudo').value = data.conteudo;
       document.getElementById('imagem').value = data.imagem;
+      document.getElementById('link').value = data.link;
       
       const categoriasElement = document.getElementById('categorias');
       data.categorias.forEach(categoria => {
