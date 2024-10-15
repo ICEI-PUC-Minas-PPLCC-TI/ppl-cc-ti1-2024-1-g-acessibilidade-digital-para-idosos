@@ -215,13 +215,18 @@
   <form id="topicForm">
     <label for="titulo">Título:</label>
     <input type="text" id="titulo" name="titulo">
-
+    
+    <button type="button" id="gerarBtn">Gerar</button> <!-- Botão para gerar a resposta -->
+  
     <label for="conteudo">Conteúdo:</label>
     <textarea id="conteudo" name="conteudo"></textarea>
-
-    <label for="imagem">URL da Imagem:</label>
+  
+    <label for="imagem">Imagem:</label>
     <input type="text" id="imagem" name="imagem">
-
+  
+    <label for="link">URL do vídeo:</label>
+    <input type="text" id="link" name="link">
+  
     <label for="categorias">Categorias:</label>
     <select id="categorias" name="categorias" multiple>
       <option value="redes sociais">Redes Sociais</option>
@@ -230,9 +235,10 @@
       <option value="pesquisas">Pesquisas</option>
       <option value="videochamada">Videochamada</option>
     </select>
-
-    <button type="submit">Criar</button>
+  
+    <button type="submit">Criar</button> <!-- Botão de criação original -->
   </form>
+  
 </div>
 
 <script>
