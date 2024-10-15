@@ -143,6 +143,16 @@
         "Internet",
         "Pesquisa"
       ]
+    },
+    {
+      "id": "6d7b",
+      "titulo": "Como salvar contatos",
+      "conteudo": "Passo 1: Abra o aplicativo de contatos no seu dispositivo. \n\nPasso 2: Procure a opção para adicionar um novo contato, geralmente indicada por um símbolo de \"+\" ou \"Adicionar Contato\". \n\nPasso 3: Insira as informações do contato, como nome, telefone e e-mail. \n\nPasso 4: Se desejar, adicione outras informações, como endereço, data de aniversário ou notas. \n\nPasso 5: Após preencher todos os dados, salve o contato. Normalmente, há um botão \"Salvar\" no canto da tela. \n\nPasso 6: Verifique se o contato foi adicionado corretamente, buscando-o na lista de contatos.",
+      "link": "https://www.youtube.com/watch?v=oNREZ0cx7t4",
+      "categorias": [
+        "redes sociais"
+      ],
+      "imagem": "img/facebook.webp"
     }
   ],
   "mensagens": [

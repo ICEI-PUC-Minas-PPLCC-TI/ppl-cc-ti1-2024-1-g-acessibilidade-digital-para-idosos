@@ -224,9 +224,6 @@
     <label for="link">URL do vídeo:</label>
     <input type="text" id="link" name="link">
   
-    <label for="imagem">Imagem:</label>
-    <input type="text" id="imagem" name="imagem">
-  
     <label for="categorias">Categorias:</label>
     <select id="categorias" name="categorias" multiple>
       <option value="redes sociais">Redes Sociais</option>
@@ -234,6 +231,10 @@
       <option value="internet">Internet</option>
       <option value="pesquisas">Pesquisas</option>
       <option value="videochamada">Videochamada</option>
+      <option value="comunicacao">Comunicação</option>
+      <option value="tecnologia">Tecnologia</option>
+
+
     </select>
   
     <button type="submit">Criar</button> <!-- Botão de criação original -->
@@ -253,6 +254,26 @@ document.getElementById('topicForm').addEventListener('submit', function(event) 
 const formObject = Object.fromEntries(formData.entries());
 formObject.categorias = categorias;
 
+let imagem = '';
+  if (categorias.includes('redes sociais')) {
+    imagem = 'img/facebook.webp';
+  } else if (categorias.includes('fotografia')) {
+    imagem = 'img/smartphone.jpg';
+  } else if (categorias.includes('internet')) {
+    imagem = 'img/Internet.jpg';
+  } else if (categorias.includes('pesquisas')) {
+    imagem = 'img/pesquisa.jpg';
+  } else if (categorias.includes('videochamada')) {
+    imagem = 'img/zoom.jpeg';
+  } else if (categorias.includes('comunicacao')) {
+    imagem = 'img/whatsapp.png';
+  } else if (categorias.includes('tecnologia')) {
+    imagem = 'img/computador.jpeg';
+  }
+
+  formObject.imagem = imagem;
+
+
   fetch('http://localhost:3001/topicos', {
     method: 'POST',
     headers: {
@@ -269,6 +290,7 @@ formObject.categorias = categorias;
       console.error('Error adding new topic:', error);
     });
 });
+
 </script>
 <script type="module" src="js/custom.js"></script>
 
