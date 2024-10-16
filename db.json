@@ -145,14 +145,14 @@
       ]
     },
     {
-      "id": "6d7b",
-      "titulo": "Como salvar contatos",
-      "conteudo": "Passo 1: Abra o aplicativo de contatos no seu dispositivo. \n\nPasso 2: Procure a opção para adicionar um novo contato, geralmente indicada por um símbolo de \"+\" ou \"Adicionar Contato\". \n\nPasso 3: Insira as informações do contato, como nome, telefone e e-mail. \n\nPasso 4: Se desejar, adicione outras informações, como endereço, data de aniversário ou notas. \n\nPasso 5: Após preencher todos os dados, salve o contato. Normalmente, há um botão \"Salvar\" no canto da tela. \n\nPasso 6: Verifique se o contato foi adicionado corretamente, buscando-o na lista de contatos.",
-      "link": "https://www.youtube.com/watch?v=oNREZ0cx7t4",
+      "id": "ff1d",
+      "titulo": "Como mandar mensagem para meu neto",
+      "conteudo": "Passo 1: Abra o aplicativo de mensagens no seu dispositivo, como WhatsApp, Telegram ou SMS.\n\nPasso 2: Selecione o contato do seu neto na lista de contatos.\n\nPasso 3: Toque na área de texto onde você pode digitar sua mensagem.\n\nPasso 4: Escreva sua mensagem como você faria em uma conversa normal. \n\nPasso 5: Após revisar a mensagem, toque no botão de enviar, geralmente representado por um ícone de avião de papel ou seta.",
+      "link": "https://www.youtube.com/watch?v=9jWjg2uG8eI",
       "categorias": [
-        "redes sociais"
+        "Comunicação"
       ],
-      "imagem": "img/facebook.webp"
+      "imagem": "img/whatsapp.png"
     }
   ],
   "mensagens": [
@@ -232,6 +232,15 @@
       "categorias": [
         "Comunicação",
         "E-mail"
+      ]
+    },
+    {
+      "id": "6f2f",
+      "UserId": 2,
+      "titulo": "Como mandar mensagem para meu neto",
+      "imagem": "img/whatsapp.png",
+      "categorias": [
+        "comunicacao"
       ]
     }
   ]

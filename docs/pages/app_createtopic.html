@@ -226,13 +226,13 @@
   
     <label for="categorias">Categorias:</label>
     <select id="categorias" name="categorias" multiple>
-      <option value="redes sociais">Redes Sociais</option>
-      <option value="fotografia">Fotografia</option>
-      <option value="internet">Internet</option>
-      <option value="pesquisas">Pesquisas</option>
-      <option value="videochamada">Videochamada</option>
-      <option value="comunicacao">Comunicação</option>
-      <option value="tecnologia">Tecnologia</option>
+      <option value="Redes Sociais">Redes Sociais</option>
+      <option value="Fotografia">Fotografia</option>
+      <option value="Internet">Internet</option>
+      <option value="Pesquisas">Pesquisas</option>
+      <option value="Videochamada">Videochamada</option>
+      <option value="Comunicação">Comunicação</option>
+      <option value="Tecnologia">Tecnologia</option>
 
 
     </select>
@@ -255,19 +255,19 @@ const formObject = Object.fromEntries(formData.entries());
 formObject.categorias = categorias;
 
 let imagem = '';
-  if (categorias.includes('redes sociais')) {
+  if (categorias.includes('Redes Sociais')) {
     imagem = 'img/facebook.webp';
-  } else if (categorias.includes('fotografia')) {
+  } else if (categorias.includes('Fotografia')) {
     imagem = 'img/smartphone.jpg';
-  } else if (categorias.includes('internet')) {
+  } else if (categorias.includes('Internet')) {
     imagem = 'img/Internet.jpg';
-  } else if (categorias.includes('pesquisas')) {
+  } else if (categorias.includes('Pesquisas')) {
     imagem = 'img/pesquisa.jpg';
-  } else if (categorias.includes('videochamada')) {
+  } else if (categorias.includes('Videochamada')) {
     imagem = 'img/zoom.jpeg';
-  } else if (categorias.includes('comunicacao')) {
+  } else if (categorias.includes('Comunicação')) {
     imagem = 'img/whatsapp.png';
-  } else if (categorias.includes('tecnologia')) {
+  } else if (categorias.includes('Tecnologia')) {
     imagem = 'img/computador.jpeg';
   }
 
