@@ -1,298 +1,300 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Criar Tópico</title>
-<style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Tópico</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <style>
+    .main-content {
+      margin-left: 220px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-grow: 1;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
 
-        .navbar {
-            width: 200px;
-            background-color: blue;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            padding: 20px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            color: white;
-        }
+    h1 {
+      margin-top: 20px;
+      color: #333;
+      font-size: 24px;
+      font-weight: bold;
+    }
 
-        .navbar .logo {
-            margin-bottom: 20px;
-            width: 75%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    /* Padronizando a largura dos cards de mensagens */
+    .message-container {
+      width: 100%;
+      max-width: 800px;
+      margin-bottom: 20px;
+    }
 
-        .navbar .logo img {
-            max-width: 100%;
-            height: auto;
-        }
+    .message {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 10px;
+      background-color: #f9f9f9;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 100%;
+      /* Largura total */
+    }
 
-        .navbar ul {
-            list-style-type: none;
-            padding: 0;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: auto;
-            margin-bottom: auto;
-        }
+    .message:hover {
+      transform: scale(1.02);
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
 
-        .navbar ul li {
-            width: 100%;
-            text-align: center;
-            margin: 10px 0;
-        }
+    .message-header {
+      font-weight: bold;
+      margin-bottom: 5px;
+      font-size: 18px;
+      color: #333;
+    }
 
-        .navbar ul li a {
-            color: white;
-            text-decoration: none;
-            display: block;
-            padding: 10px 0;
-        }
+    .message-body {
+      margin-bottom: 5px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+    }
 
-        .navbar ul li a:hover {
-            background-color: #0056b3;
-        }
+    /* Padronizando a largura dos botões */
+    button,
+    .delete-button,
+    .edit-button,
+    .save-button,
+    .cancel-button {
+      width: 150px;
+      /* Largura fixa para todos os botões */
+      text-align: center;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
 
-        .main-content {
-            margin-left: 220px;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            flex-grow: 1;
-        }
+    .delete-button {
+      background-color: #ff3333;
+      color: white;
+      border: none;
+    }
 
-        h1 {
-            margin-top: 20px;
-        }
+    .delete-button:hover {
+      background-color: #cc0000;
+    }
 
-        .message-container {
-            width: 100%;
-            max-width: 800px;
-            margin-bottom: 20px;
-        }
-        
-        .message {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 10px;
-            margin-bottom: 10px;
-            position: relative;
-        }
-        
-        .message-header {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        
-        .message-body {
-            margin-bottom: 5px;
-        }
-        
-        .delete-button {
-            background-color: #ff3333;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 5px 10px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        
-        .edit-button {
-            background-color: #4CAF50; /* Green */
-            border: none;
-            color: white;
-            padding: 5px 10px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 12px;
-            border-radius: 5px;
-            cursor: pointer;
-            position: absolute;
-            top: 5px;
-            right: 5px;
-        }
-        
-        .save-button {
-            background-color: blue;
-            color: white;
-            padding: 5px 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 12px;
-            margin-right: 5px;
-            margin-top: 10px;
-        }
+    .edit-button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+    }
 
-        .cancel-button {
-            background-color: #ccc;
-            color: black;
-            padding: 5px 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 12px;
-            margin-top: 10px;
-        }
+    .edit-button:hover {
+      background-color: #45a049;
+    }
 
-        .edit-area {
-            display: none;
-            flex-direction: column;
-            margin-top: 10px;
-        }
-        
-        .edit-content {
-            width: 100%;
-            padding: 10px;
-            font-size: 14px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
+    .save-button {
+      background-color: #003366;
+      color: white;
+      border: none;
+      margin-right: 5px;
+      margin-top: 10px;
+    }
 
-        form {
-            width: 500px;
-            margin: 20px auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    .save-button:hover {
+      background-color: #002244;
+    }
 
-        form input,
-        form textarea,
-        form select,
-        form button {
-            display: block;
-            width: 100%;
-            margin-bottom: 10px;
-        }
+    .cancel-button {
+      background-color: #ccc;
+      color: black;
+      border: none;
+      margin-top: 10px;
+    }
 
-        form button {
-            background-color: blue;
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-        }
-</style>
+    .cancel-button:hover {
+      background-color: #b3b3b3;
+    }
+
+    .edit-area {
+      display: none;
+      flex-direction: column;
+      margin-top: 10px;
+    }
+
+    .edit-content {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Estilizando formulários e padronizando botões dentro de formulários */
+    form {
+      width: 100%;
+      max-width: 500px;
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    form input,
+    form textarea,
+    form select {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    form button {
+      background-color: #003366;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 300px;
+      /* Padronizando largura do botão no formulário */
+    }
+
+    form button:hover {
+      background-color: #002244;
+    }
+  </style>
 </head>
-<body>
 
+<body>
   <div class="navbar">
     <div class="logo">
-      <img src="img/logo_redonda.png" alt="Logo do Site">
+      <img src="/img/logo_redonda.png" alt="Logo do Site">
     </div>
     <ul id="lista-menu">
       <li><a href="conteudo_staff.html">Menu Principal</a></li>
       <li><a href="app_createtopic.html">Adicionar conteúdo</a></li>
-      <li><a href="app_edittopic.html">Editar tópico</a></li>
       <li><a href="sendmessage_staff.html">Criar Mensagem</a></li>
+      <li><a href="perfil_staff.html">Meu Perfil</a></li>
       <li><a href="index.html">Sair</a></li>
     </ul>
   </div>
 
-<div class="main-content">
-  <h1>Criar Tópico</h1>
-  <form id="topicForm">
-    <label for="titulo">Título:</label>
-    <input type="text" id="titulo" name="titulo">
+  <div class="main-content">
+    <h1>Criar Tópico</h1>
+    <form id="topicForm">
+      <label for="titulo">Título:</label>
+      <input type="text" id="titulo" name="titulo">
 
-    <button type="button" id="gerarBtn">Gerar</button> <!-- Botão para gerar a resposta -->
-      
-    <label for="conteudo">Conteúdo:</label>
-    <textarea id="conteudo" name="conteudo"></textarea>
-  
-    <label for="link">URL do vídeo:</label>
-    <input type="text" id="link" name="link">
-  
-    <label for="categorias">Categorias:</label>
-    <select id="categorias" name="categorias" multiple>
-      <option value="Redes Sociais">Redes Sociais</option>
-      <option value="Fotografia">Fotografia</option>
-      <option value="Internet">Internet</option>
-      <option value="Pesquisas">Pesquisas</option>
-      <option value="Videochamada">Videochamada</option>
-      <option value="Comunicação">Comunicação</option>
-      <option value="Tecnologia">Tecnologia</option>
+      <button type="button" id="gerarBtn">Gerar</button> <!-- Botão para gerar a resposta -->
 
+      <label for="conteudo">Conteúdo:</label>
+      <textarea id="conteudo" name="conteudo"></textarea>
 
-    </select>
-  
-    <button type="submit">Criar</button> <!-- Botão de criação original -->
-  </form>
-  
-</div>
+      <label for="link">URL do vídeo:</label>
+      <input type="text" id="link" name="link">
 
-<script>
-document.getElementById('topicForm').addEventListener('submit', function(event) {
-  event.preventDefault();
-
-  const form = event.target;
-  const formData = new FormData(form);
-  const categorias = Array.from(formData.getAll('categorias'));
-
-// Criar um objeto a partir dos dados do formulário
-const formObject = Object.fromEntries(formData.entries());
-formObject.categorias = categorias;
-
-let imagem = '';
-  if (categorias.includes('Redes Sociais')) {
-    imagem = 'img/facebook.webp';
-  } else if (categorias.includes('Fotografia')) {
-    imagem = 'img/smartphone.jpg';
-  } else if (categorias.includes('Internet')) {
-    imagem = 'img/Internet.jpg';
-  } else if (categorias.includes('Pesquisas')) {
-    imagem = 'img/pesquisa.jpg';
-  } else if (categorias.includes('Videochamada')) {
-    imagem = 'img/zoom.jpeg';
-  } else if (categorias.includes('Comunicação')) {
-    imagem = 'img/whatsapp.png';
-  } else if (categorias.includes('Tecnologia')) {
-    imagem = 'img/computador.jpeg';
-  }
-
-  formObject.imagem = imagem;
+      <label for="categoria">Categoria:</label>
+      <select id="categoria" name="categoria" multiple>
+        <option value="Redes Sociais">Redes Sociais</option>
+        <option value="Fotografia">Fotografia</option>
+        <option value="Internet">Internet</option>
+        <option value="Pesquisas">Pesquisas</option>
+        <option value="Videochamada">Videochamada</option>
+        <option value="Comunicação">Comunicação</option>
+        <option value="Tecnologia">Tecnologia</option>
 
 
-  fetch('http://localhost:3001/topicos', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(formObject),
-  })
-    .then(response => response.json())
-    .then(data => {
-      console.log('New topic added:', data);
-      form.reset();
-    })
-    .catch(error => {
-      console.error('Error adding new topic:', error);
+      </select>
+
+      <button type="submit">Criar</button> <!-- Botão de criação original -->
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('topicForm').addEventListener('submit', function (event) {
+      event.preventDefault(); // Previne o envio padrão do formulário
+
+      const form = event.target;
+      const formData = new FormData(form);
+
+      // Obtém o valor selecionado do campo de categoria
+      const categoria = formData.get('categoria'); // Pega a primeira categoria selecionada (caso tenha múltiplos)
+
+      let imagem = '';
+
+      // Compara diretamente o valor da categoria selecionada com as opções
+      if (categoria === 'Redes Sociais') {
+        imagem = '/img/facebook.webp';
+      } else if (categoria === 'Fotografia') {
+        imagem = '/img/smartphone.jpg';
+      } else if (categoria === 'Internet') {
+        imagem = '/img/Internet.png';
+      } else if (categoria === 'Pesquisas') {
+        imagem = '/img/pesquisa.jpeg';
+      } else if (categoria === 'Videochamada') {
+        imagem = '/img/zoom.jpeg';
+      } else if (categoria === 'Comunicação') {
+        imagem = '/img/whatsapp.png';
+      } else if (categoria === 'Tecnologia') {
+        imagem = '/img/computador.jpeg';
+      }
+
+      formData.append('imagem', imagem);
+
+      // Criar os parâmetros no formato de query
+      const queryParams = new URLSearchParams();
+      queryParams.append('id', Math.floor(Math.random() * 10000)); // Gera um ID numérico aleatório
+      queryParams.append('titulo', formData.get('titulo'));
+      queryParams.append('conteudo', formData.get('conteudo'));
+      queryParams.append('imagem', imagem); // Insere a imagem aqui
+      queryParams.append('link', formData.get('link'));
+      queryParams.append('categoria', categoria); // Usa a categoria diretamente
+
+      // Fazer o POST request com os parâmetros no formato 'application/x-www-form-urlencoded'
+      fetch('http://localhost:4567/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: queryParams.toString(), // Converte os parâmetros em uma string formatada
+      })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+          }
+          return response.json(); // Processa a resposta como JSON
+        })
+        .then(data => {
+          alert(data); // Exibe uma mensagem de sucesso
+          form.reset(); // Limpa o formulário após o envio bem-sucedido
+        })
+        .catch(error => {
+          console.error('There has been a problem with your fetch operation:', error);
+          alert('Falha ao criar o tópico. Tente novamente.'); // Mostra um alerta em caso de erro
+        });
     });
-});
 
-</script>
-<script type="module" src="js/custom.js"></script>
 
+  </script>
+  <script type="module" src="js/custom.js"></script>
 </body>
+
 </html>
