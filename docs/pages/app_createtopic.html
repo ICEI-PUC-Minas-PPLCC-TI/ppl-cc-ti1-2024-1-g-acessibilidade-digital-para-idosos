@@ -155,12 +155,16 @@
       border-radius: 10px;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     }
-
+    form label {
+      margin-top: 10px;
+    }
+    
     form input,
     form textarea,
     form select {
       width: 100%;
       margin-bottom: 10px;
+
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 5px;
@@ -202,8 +206,11 @@
     <form id="topicForm">
       <label for="titulo">Título:</label>
       <input type="text" id="titulo" name="titulo">
+      <button type="button" id="gerarBtn">Gerar a partir de um título</button> <!-- Botão para gerar a resposta -->
 
-      <button type="button" id="gerarBtn">Gerar</button> <!-- Botão para gerar a resposta -->
+      <label for="imagemUpload" >Ou envie uma imagem:</label>
+      <input type="file" id="imagemUpload" accept="image/*">
+      <button type="button" id="gerarImagemBtn">Gerar a partir de uma imagem</button>
 
       <label for="conteudo">Conteúdo:</label>
       <textarea id="conteudo" name="conteudo"></textarea>

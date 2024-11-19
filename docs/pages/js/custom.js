@@ -1,6 +1,8 @@
 const form = document.getElementById('topicForm');
+const gerarImagemBtn = document.getElementById('gerarImagemBtn');
 const gerarBtn = document.getElementById('gerarBtn');
 const tituloInput = document.getElementById('titulo');
+const imagemInput = document.getElementById('imagemUpload');
 const conteudoInput = document.getElementById('conteudo');
 const linkInput = document.getElementById('link');  // Campo para o link de vídeo
 
@@ -51,3 +53,60 @@ if (gerarBtn) {
     }
   });
 }
+
+if (gerarImagemBtn) {
+  gerarImagemBtn.addEventListener('click', async () => {
+    const imagemInput = document.getElementById('imagemUpload');
+
+    if (!imagemInput.files.length) {
+      alert("Por favor, selecione uma imagem antes de gerar uma resposta.");
+      return;
+    }
+    const imagem = imagemInput.files[0];
+  const reader = new FileReader();
+
+  reader.onload = async function (event) {
+    const imagemBase64 = event.target.result.split(',')[1];
+
+    try {
+      const response = await fetch('https://easy-peasy.ai/api/generate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer d7a188c605c7862ba3a7699d13be6e7fbdcd45ed61f5fd7232b26dccd9d059f2`,  // Use sua chave API aqui
+        },
+        body: JSON.stringify({
+          model: 'claude-3-haiku-20240307',
+          max_tokens: 1024,
+          messages: [
+            {
+              role: 'user',
+              content: {
+                type: 'image',
+                source: {
+                  type: 'base64',
+                  media_type: imagem.type,
+                  data: imagemBase64,
+                },
+              },},
+          ],
+          stream: false
+        })
+      });
+
+      const result = await response.json();
+      const tituloGerado = result.messages[0]?.content; // Obtém o texto gerado da API
+
+      if (tituloGerado) {
+        tituloInput.value = tituloGerado.trim(); // Define o título gerado no campo "Título"
+      } else {
+        alert("Nenhum título foi gerado. Verifique a imagem enviada ou tente novamente.");
+      }
+    } catch (error) {
+      console.error('Erro ao gerar o título:', error);
+      alert('Ocorreu um erro ao tentar gerar o título. Tente novamente.');
+    }
+  };
+
+  reader.readAsDataURL(imagem); // Converte a imagem para base64
+})}
